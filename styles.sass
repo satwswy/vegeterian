@@ -44,20 +44,19 @@ aside
 header
   background-color: lightcoral
 
-  > div > button
+  > .mode-selector > button
     width: 50px
     height: 50px
     border-radius: 50%
     cursor: pointer
 
-  &:first-child
-    > div > button
-      background-color: white
-      border: 1px solid black
+  .mode-selector > button:first-child
+    background-color: white
+    border: 1px solid black
 
-  &:not(:first-child)
-    > div > button
-      background-color: black
+  .mode-selector > button:not(:first-child)
+    background-color: black
+
         
 
 
