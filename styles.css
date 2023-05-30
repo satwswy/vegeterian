@@ -51,8 +51,10 @@ header {
   padding-top: 50px;
   padding-right: 50px;
   display: flex;
+  justify-content: space-between;
 }
 header > h1 {
+  max-width: 1200px;
   font-size: 42px;
 }
 header > .mode-selector {
@@ -75,7 +77,35 @@ header .mode-selector > button:not(:first-child) {
 
 main {
   padding-right: 50px;
-  background-color: lightgray;
+  background-color: white;
+}
+main section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+main section:first-child h3 {
+  max-width: 670px;
+}
+main section:first-child nav {
+  display: flex;
+  gap: 12px;
+}
+main section:first-child nav div.svg-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 50%;
+}
+main section:first-child nav div.svg-wrapper svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
 }
 
 footer {
