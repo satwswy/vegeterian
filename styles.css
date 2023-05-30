@@ -115,6 +115,21 @@ main section:first-child nav div.svg-wrapper svg {
   width: 15px;
   height: 15px;
 }
+main section:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section:nth-child(2) figure {
+  flex-basis: 50%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main section:nth-child(2) figure img {
+  width: 100%;
+  height: auto;
+}
 
 footer {
   grid-column: 1/-1;
