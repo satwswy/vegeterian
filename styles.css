@@ -50,13 +50,19 @@ aside {
   width: 320px;
   padding-left: 50px;
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
 aside h5 {
   max-width: 210px;
 }
 aside figure {
-  width: 110px;
-  height: 110px;
+  width: 100%;
+  height: 260px;
+}
+aside figure img {
+  width: 115px;
+  height: 115px;
 }
 
 header {
@@ -69,10 +75,12 @@ header {
 header > h1 {
   max-width: 1200px;
   font-size: 42px;
+  height: 260px;
 }
 header > .mode-selector {
   display: flex;
   gap: 12px;
+  height: 260px;
 }
 header > .mode-selector > button {
   width: 70px;
