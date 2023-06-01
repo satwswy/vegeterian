@@ -188,6 +188,10 @@ main section:nth-child(4) {
   margin-top: 100px;
   margin-bottom: 50px;
 }
+main section:nth-child(4) div {
+  display: flex;
+  gap: 12px;
+}
 
 footer {
   grid-column: 1/-1;
