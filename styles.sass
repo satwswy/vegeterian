@@ -8,6 +8,9 @@
   &::before,&::after
     box-sizing: border-box
 
+html
+  scroll-behavior: smooth
+
 img,svg
   display: block
   max-width: 100%
@@ -52,6 +55,46 @@ aside
   figure
     width: 50%
     margin-bottom: 350px
+  #progress
+    position: fixed
+    height: 170px
+    width: 170px
+    display: grid
+    place-items: center
+    border-radius: 50%
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+    cursor: pointer
+    #progress-value
+      display: block
+      height: calc( 100% - 15px )
+      width: calc( 100% - 15px )
+      background-color: #fff
+      border-radius: 50%
+      display: grid
+      place-items: center
+      font-size: 35px
+      color: #001a2e
+      position: relative
+      &::after
+        content: ""
+        width: 50px
+        height: 80px
+        background-color: black
+        border-radius: 25px
+        position: absolute
+        inset: 0
+        margin: auto
+      &::before
+        content: ""
+        width: 10px
+        height: 10px
+        background-color: white
+        position: absolute
+        border-radius: 50%
+        color: white
+        top: 50px
+        z-index: 5
+
 
 header
   grid-column: 2/2

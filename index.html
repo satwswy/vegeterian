@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
@@ -23,6 +24,13 @@
             </span>
             <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
         </h5>
+        <!-- <div class="circle">
+            <div class="circle-border"></div>
+            <div class="mouse"></div>
+        </div> -->
+        <div id="progress">
+            <span id="progress-value">&#x1F815</span>
+        </div>
     </aside>
     <header>
         <h1>
@@ -266,6 +274,63 @@
 
     </footer>
     <script>
+
+
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value")
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+            let scrollValue = Math.round((pos * 100) / calcHeight)
+            // if (pos > 100) {
+            //     scrollProgress.style.display = "grid";
+            // } else {
+            //     scrollProgress.style.display = "none"
+            // }
+            scrollProgress.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
+            });
+
+
+            scrollProgress.style.background = `conic-gradient(black ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+        }
+
+
+
+
+        window.onscroll = calcScrollValue;
+        window.onload = calcScrollValue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const circle = document.querySelector('.circle');
+        // const circleBorder = document.querySelector('.circle-border');
+        // const maxScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        // function updateBorderColor() {
+        //     const scrollPercentage = window.pageYOffset / maxScrollHeight;
+        //     const colorValue = Math.round(255 * scrollPercentage);
+        //     const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+        //     circleBorder.style.borderRightColor = color;
+        // }
+        // window.addEventListener('scroll', updateBorderColor);
+
+
+
         window.addEventListener('DOMContentLoaded', function () {
             var headerH1 = document.querySelector('header h1');
             var figure = document.querySelector('aside figure');
