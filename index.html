@@ -21,7 +21,6 @@
         <h5>
             <span>Περισσότερα για τα νέα προϊόντα αλλά και λαχταριστές συνταγές στο www.thevegetarianbutcher.gr
             </span>
-            <br>
             <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
         </h5>
     </aside>
@@ -267,19 +266,19 @@
 
     </footer>
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-          var headerH1 = document.querySelector('header h1');
-          var figure = document.querySelector('aside figure');
-      
-          function setFigureHeight() {
-            figure.style.height = headerH1.offsetHeight + 'px';
-          }
-      
-          // Call the setFigureHeight function initially and whenever the window is resized
-          setFigureHeight();
-          window.addEventListener('resize', setFigureHeight);
+        window.addEventListener('DOMContentLoaded', function () {
+            var headerH1 = document.querySelector('header h1');
+            var figure = document.querySelector('aside figure');
+
+            function setFigureHeight() {
+                figure.style.height = headerH1.offsetHeight + 'px';
+            }
+
+            // Call the setFigureHeight function initially and whenever the window is resized
+            setFigureHeight();
+            window.addEventListener('resize', setFigureHeight);
         });
-      </script>
+    </script>
 </body>
 
 </html>
