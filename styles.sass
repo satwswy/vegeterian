@@ -42,59 +42,64 @@ body
 
 aside
   grid-column: 1/1
-  grid-row: 1/-1
+  grid-row: 1/3
   background-color: lightblue
   padding-inline: 20px
   padding-top: 50px
-
-  h5
+  section
+    position: sticky
+    top: 50px
     display: flex
     flex-direction: column
-    gap: 15px
+    align-items: center
+    h5
+      display: flex
+      flex-direction: column
+      gap: 15px
     span:nth-child(2)
       color: rgb(103, 19, 17)
-  figure
-    width: 50%
-    margin-bottom: 350px
-  #progress
-    height: 110px
-    width: 110px
-    display: grid
-    place-items: center
-    border-radius: 50%
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-    cursor: pointer
-    margin-top: 50px
-    #progress-value
-      display: block
-      height: calc( 100% - 15px )
-      width: calc( 100% - 15px )
-      background-color: #fff
-      border-radius: 50%
+    figure
+      width: 50%
+      margin-bottom: 350px
+    #progress
+      height: 110px
+      width: 110px
       display: grid
       place-items: center
-      font-size: 35px
-      color: #001a2e
-      position: relative
-      &::after
-        content: ""
-        width: 30px
-        height: 50px
-        background-color: black
-        border-radius: 25px
-        position: absolute
-        inset: 0
-        margin: auto
-      &::before
-        content: ""
-        width: 6px
-        height: 6px
-        background-color: white
-        position: absolute
+      border-radius: 50%
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+      cursor: pointer
+      margin-top: 50px
+      #progress-value
+        display: block
+        height: calc( 100% - 15px )
+        width: calc( 100% - 15px )
+        background-color: #fff
         border-radius: 50%
-        color: white
-        top: 30px
-        z-index: 5
+        display: grid
+        place-items: center
+        font-size: 35px
+        color: #001a2e
+        position: relative
+        &::after
+          content: ""
+          width: 30px
+          height: 50px
+          background-color: black
+          border-radius: 25px
+          position: absolute
+          inset: 0
+          margin: auto
+        &::before
+          content: ""
+          width: 6px
+          height: 6px
+          background-color: white
+          position: absolute
+          border-radius: 50%
+          color: white
+          top: 30px
+          z-index: 5
 
 header
   grid-column: 2/2
@@ -202,7 +207,7 @@ main
       border-radius: 50%
 
     p
-      max-width: 800px
+      width: 50%
       display: flex
       flex-direction: column
       justify-content: space-between
