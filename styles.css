@@ -103,6 +103,7 @@ main section:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 50px;
 }
 main section:first-child h3 {
   width: 49.59%;
