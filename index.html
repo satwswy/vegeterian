@@ -15,7 +15,7 @@
 
 <body>
     <aside>
-        <figure>
+        <figure id="logo-figure">
             <img src="./assets/logo_10.jpg" alt="logo image">
         </figure>
         <h5>
@@ -266,7 +266,16 @@
         </section>
 
     </footer>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the height of the h1 element in the header
+            var headerHeight = document.querySelector("header h1").offsetHeight;
+            
+            // Set the height of the figure element in the aside section
+            var logoFigure = document.getElementById("logo-figure");
+            logoFigure.style.height = headerHeight + "px";
+        });
+    </script>
 </body>
 
 </html>

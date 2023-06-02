@@ -142,6 +142,8 @@ main section:nth-child(2) figure {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  height: 0;
+  position: relative;
 }
 main section:nth-child(2) figure:nth-child(2) {
   background-color: rgb(103, 19, 17);
@@ -157,6 +159,9 @@ main section:nth-child(2) figure img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 main section:nth-child(3) {
   display: flex;
