@@ -76,6 +76,7 @@ aside #progress {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  margin-top: 50px;
 }
 aside #progress #progress-value {
   display: block;

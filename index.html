@@ -24,10 +24,6 @@
             </span>
             <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
         </h5>
-        <!-- <div class="circle">
-            <div class="circle-border"></div>
-            <div class="mouse"></div>
-        </div> -->
         <div id="progress">
             <span id="progress-value">&#x1F815</span>
         </div>
@@ -293,42 +289,12 @@
             });
 
 
-            scrollProgress.style.background = `conic-gradient(black ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+            scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
         }
-
-
 
 
         window.onscroll = calcScrollValue;
         window.onload = calcScrollValue
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // const circle = document.querySelector('.circle');
-        // const circleBorder = document.querySelector('.circle-border');
-        // const maxScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-        // function updateBorderColor() {
-        //     const scrollPercentage = window.pageYOffset / maxScrollHeight;
-        //     const colorValue = Math.round(255 * scrollPercentage);
-        //     const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
-        //     circleBorder.style.borderRightColor = color;
-        // }
-        // window.addEventListener('scroll', updateBorderColor);
-
 
 
         window.addEventListener('DOMContentLoaded', function () {
@@ -339,9 +305,23 @@
                 figure.style.height = headerH1.offsetHeight + 'px';
             }
 
-            // Call the setFigureHeight function initially and whenever the window is resized
             setFigureHeight();
             window.addEventListener('resize', setFigureHeight);
+        });
+
+
+
+
+        window.addEventListener('DOMContentLoaded', function () {
+            var asideH5 = document.querySelector('aside h5');
+            var mainH3 = document.querySelector('main section:first-child h3');
+
+            function setMainH3Height() {
+                mainH3.style.height = asideH5.offsetHeight + 'px';
+            }
+
+            setMainH3Height();
+            window.addEventListener('resize', setMainH3Height);
         });
     </script>
 </body>
