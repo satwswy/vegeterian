@@ -43,8 +43,6 @@ aside
   background-color: lightblue
   padding-left: 50px
   padding-top: 50px
-  display: flex
-  flex-direction: column
   h5
     max-width: 210px
   figure
@@ -54,7 +52,7 @@ aside
 header
   grid-column: 2/2
   grid-row: 1/1
-  background-color: lightcoral
+  background-color: grey
   padding-top: 50px
   padding-right: 50px
   display: flex
@@ -62,8 +60,9 @@ header
   >h1
     margin-bottom: 350px
     width: 79.28%
-    font-size: 42px
-    height: 260px
+    font-size: 32px
+    line-height: 1.4
+
   > .mode-selector
     display: flex
     gap: 3px
@@ -129,8 +128,6 @@ main
       padding: 0
       margin: 0
       box-sizing: border-box
-      height: 0
-      position: relative
       &:nth-child(2)
         background-color: rgb(103, 19, 17)
       &:nth-child(3)
@@ -142,10 +139,7 @@ main
       height: 100%
       object-fit: cover
       object-position: center
-      position: absolute
-      top: 0
-      left: 0
-      
+
 
   section:nth-child(3)
     display: flex

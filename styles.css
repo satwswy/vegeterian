@@ -50,8 +50,6 @@ aside {
   background-color: lightblue;
   padding-left: 50px;
   padding-top: 50px;
-  display: flex;
-  flex-direction: column;
 }
 aside h5 {
   max-width: 210px;
@@ -64,7 +62,7 @@ aside figure {
 header {
   grid-column: 2/2;
   grid-row: 1/1;
-  background-color: lightcoral;
+  background-color: grey;
   padding-top: 50px;
   padding-right: 50px;
   display: flex;
@@ -73,8 +71,8 @@ header {
 header > h1 {
   margin-bottom: 350px;
   width: 79.28%;
-  font-size: 42px;
-  height: 260px;
+  font-size: 32px;
+  line-height: 1.4;
 }
 header > .mode-selector {
   display: flex;
@@ -142,8 +140,6 @@ main section:nth-child(2) figure {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  height: 0;
-  position: relative;
 }
 main section:nth-child(2) figure:nth-child(2) {
   background-color: rgb(103, 19, 17);
@@ -159,9 +155,6 @@ main section:nth-child(2) figure img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 main section:nth-child(3) {
   display: flex;
