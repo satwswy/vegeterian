@@ -66,6 +66,7 @@ aside section h5 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 aside section span:nth-child(2) {
   color: rgb(103, 19, 17);
@@ -268,6 +269,9 @@ footer ul {
 .marquees-wrapper {
   overflow-x: hidden;
 }
+.marquees-wrapper:hover ul {
+  animation-play-state: paused;
+}
 
 .marquee {
   --gap: 100px;
@@ -276,9 +280,6 @@ footer ul {
   gap: var(--gap);
   background: black;
   user-select: none;
-}
-.marquee:hover ul {
-  animation-play-state: paused;
 }
 
 .marquee__content {
