@@ -360,6 +360,20 @@
             window.addEventListener('resize', setMainH3Height);
         });
 
+        window.addEventListener('DOMContentLoaded', function () {
+            var figure = document.querySelector('section:nth-child(3) figure');
+            var p = document.querySelector('section:nth-child(3) p');
+
+            function setFigureHeightAndWidth() {
+                var height = p.offsetHeight;
+                figure.style.height = height + 'px';
+                figure.style.width = height + 'px';
+            }
+
+            setFigureHeightAndWidth();
+            window.addEventListener('resize', setFigureHeightAndWidth);
+        });
+
         // <----------------------------------------------------------------------->
 
     </script>
