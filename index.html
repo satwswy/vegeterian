@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <aside>
+    <aside id="aside">
         <section>
             <figure id="logo-figure">
                 <img src="./assets/logo_10.jpg" alt="logo image">
@@ -30,7 +30,7 @@
             </div>
         </section>
     </aside>
-    <header>
+    <header id="header">
         <h1>
             Το The Vegetarian Butcher, η νέα χορτοφαγική πρόταση,
             συστήνεται για πρώτη φορά στο ελληνικό κοινό, με τέσσερα
@@ -42,7 +42,7 @@
             <button onclick="setDarkMode()"></button>
         </div>
     </header>
-    <main>
+    <main id="main">
         <section>
             <h3>
                 Ο ανατρεπτικός κόσμος του The Vegetarian Butcher, συνδυάζει την παραδοσιακή
@@ -274,6 +274,18 @@
 
     </footer>
     <script>
+
+        const aside = document.getElementById("aside")
+        const header = document.getElementById("header")
+        const main = document.getElementById("main")
+
+
+
+
+
+
+
+
 
 
         let calcScrollValue = () => {

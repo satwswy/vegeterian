@@ -47,7 +47,6 @@ body {
   grid-template-columns: 16% 84%;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: rgb(255, 255, 255);
 }
 
 aside {
@@ -131,7 +130,7 @@ header {
 }
 header > h1 {
   margin-bottom: 350px;
-  width: 79.28%;
+  width: 80%;
   font-size: 40px;
   line-height: 1.4;
 }
@@ -154,6 +153,7 @@ header .mode-selector > button:first-child {
   margin-right: 3px;
 }
 header .mode-selector > button:not(:first-child) {
+  outline: 2px solid white;
   background-color: black;
 }
 
