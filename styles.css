@@ -16,7 +16,6 @@ html {
 
 img, svg {
   display: block;
-  max-width: 100%;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -72,6 +71,9 @@ aside section span:nth-child(2) {
 aside section figure {
   width: 50%;
   margin-bottom: 350px;
+}
+aside section figure img {
+  width: 100%;
 }
 aside section #progress {
   height: 110px;
@@ -209,10 +211,10 @@ main section:nth-child(2) figure:nth-child(6) {
   background-color: rgb(116, 122, 52);
 }
 main section:nth-child(2) figure img {
-  min-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 main section:nth-child(3) {
   display: flex;
