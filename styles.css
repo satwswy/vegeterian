@@ -51,6 +51,7 @@ aside {
   grid-row: 1/3;
   padding-inline: 50px;
   padding-top: 20px;
+  position: relative;
 }
 aside section {
   position: sticky;
@@ -64,13 +65,16 @@ aside section h5 {
   flex-direction: column;
   gap: 15px;
   width: 100%;
+  margin-top: -20px;
+  line-height: 1.5;
+  font-size: 14px;
 }
 aside section span:nth-child(2) {
   color: rgb(103, 19, 17);
 }
 aside section figure {
   width: 50%;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 }
 aside section figure img {
   width: 100%;
@@ -127,13 +131,11 @@ header {
   justify-content: space-between;
 }
 header > h1 {
-  margin-bottom: 350px;
+  margin-bottom: 300px;
   width: 80%;
   font-size: 40px;
-  line-height: 1.4;
-}
-header > h1::first-line {
-  line-height: 1;
+  line-height: 1.8;
+  margin-top: -20px;
 }
 header > .mode-selector {
   display: flex;
@@ -166,6 +168,8 @@ main section:first-child {
 main section:first-child h3 {
   width: 50%;
   font-size: 20px;
+  line-height: 1.5;
+  margin-top: -3px;
 }
 main section:first-child nav {
   display: flex;
@@ -240,7 +244,7 @@ main section:nth-child(2) figure h2 {
   position: absolute;
   bottom: 50px;
   left: 50px;
-  font-size: 38px;
+  font-size: 48px;
   color: rgb(255, 255, 255);
   width: 50%;
 }
