@@ -279,11 +279,23 @@
         const header = document.getElementById("header")
         const main = document.getElementById("main")
 
+        function setLightMode() {
+            document.getElementById("main").classList.remove("dark-mode");
+            document.getElementById("header").classList.remove("dark-mode");
+            document.getElementById("aside").classList.remove("dark-mode");
+            document.getElementById("main").classList.add("light-mode");
+            document.getElementById("header").classList.add("light-mode");
+            document.getElementById("aside").classList.add("light-mode");
+        }
 
-
-
-
-
+        function setDarkMode() {
+            document.getElementById("main").classList.remove("light-mode");
+            document.getElementById("header").classList.remove("light-mode");
+            document.getElementById("aside").classList.remove("light-mode");
+            document.getElementById("main").classList.add("dark-mode");
+            document.getElementById("header").classList.add("dark-mode");
+            document.getElementById("aside").classList.add("dark-mode");
+        }
 
 
 
