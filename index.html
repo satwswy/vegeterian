@@ -275,10 +275,6 @@
     </footer>
     <script>
 
-        const aside = document.getElementById("aside")
-        const header = document.getElementById("header")
-        const main = document.getElementById("main")
-
         function setLightMode() {
             document.getElementById("main").classList.remove("dark-mode");
             document.getElementById("header").classList.remove("dark-mode");
@@ -286,6 +282,10 @@
             document.getElementById("main").classList.add("light-mode");
             document.getElementById("header").classList.add("light-mode");
             document.getElementById("aside").classList.add("light-mode");
+            document.querySelector(".marquee").style.backgroundColor = "rgb(7,7,7)"
+            document.querySelector("header .mode-selector > button:first-child").style.border = "2px solid black"
+            document.querySelector("header .mode-selector > button:not(:first-child)").style.outline = "none"
+            document.querySelector("aside section span:nth-child(2)").style.color = "rgb(103,19,17)"
         }
 
         function setDarkMode() {
@@ -295,10 +295,13 @@
             document.getElementById("main").classList.add("dark-mode");
             document.getElementById("header").classList.add("dark-mode");
             document.getElementById("aside").classList.add("dark-mode");
+            document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
+            document.querySelector("header .mode-selector > button:first-child").style.border = "none"
+            document.querySelector("header .mode-selector > button:not(:first-child)").style.outline = "1px solid white"
+            document.querySelector("aside section span:nth-child(2)").style.color = "white"
         }
 
-
-
+        // <----------------------- Scroll animation effect -------------------->
 
         let calcScrollValue = () => {
             let scrollProgress = document.getElementById("progress");
@@ -307,11 +310,8 @@
             let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
             let scrollValue = Math.round((pos * 100) / calcHeight)
-            // if (pos > 100) {
-            //     scrollProgress.style.display = "grid";
-            // } else {
-            //     scrollProgress.style.display = "none"
-            // }
+
+            /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
             scrollProgress.addEventListener("click", () => {
                 document.documentElement.scrollTop = 0;
             });
@@ -320,10 +320,15 @@
             scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
         }
 
-
         window.onscroll = calcScrollValue;
         window.onload = calcScrollValue
 
+        // <----------------------------------------------------------------------->
+
+
+
+
+        // <----------------------- Same height elements functionality -------------------->
 
         window.addEventListener('DOMContentLoaded', function () {
             var headerH1 = document.querySelector('header h1');
@@ -337,9 +342,6 @@
             window.addEventListener('resize', setFigureHeight);
         });
 
-
-
-
         window.addEventListener('DOMContentLoaded', function () {
             var asideH5 = document.querySelector('aside h5');
             var mainH3 = document.querySelector('main section:first-child h3');
@@ -351,6 +353,9 @@
             setMainH3Height();
             window.addEventListener('resize', setMainH3Height);
         });
+
+        // <----------------------------------------------------------------------->
+
     </script>
 </body>
 
