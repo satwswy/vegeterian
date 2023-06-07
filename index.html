@@ -16,13 +16,13 @@
 
 <body>
     <aside id="aside">
-        <section>
-            <div class="sticky-content">
-                <figure id="logo-figure">
-                    <img src="./assets/logo_10.jpg" alt="logo image">
-                </figure>
+        <div class="aside-content">
+            <figure id="logo-figure">
+                <img src="./assets/logo_10.jpg" alt="logo image">
+            </figure>
+            <div>
                 <h5>
-                    <span>Περισσότερα για τα νέα προϊόντα αλλά και λαχταριστές συνταγές στο www.thevegetarianbutcher.gr
+                    <span>Περισσότερα για τα νέα προϊόντα αλλά και λαχταριστές συνταγές στο thevegetarianbutcher.gr
                     </span>
                     <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
                 </h5>
@@ -30,21 +30,23 @@
                     <span id="progress-value"></span>
                 </div>
             </div>
-        </section>
-    </aside>
-    <header id="header">
-        <h1>
-            Το The Vegetarian Butcher, η νέα χορτοφαγική πρόταση,
-            συστήνεται για πρώτη φορά στο ελληνικό κοινό, με τέσσερα
-            λαχταριστά προϊόντα, το Crispy Chic Burger, το Lucky Nuggets,
-            το Legendary Burger και το Magic Mince!
-        </h1>
-        <div class="mode-selector">
-            <button onclick="setLightMode()"></button>
-            <button onclick="setDarkMode()"></button>
         </div>
-    </header>
+
+    </aside>
+
     <main id="main">
+        <div class="intro">
+            <h1>
+                Το The Vegetarian Butcher, η νέα χορτοφαγική πρόταση,
+                συστήνεται για πρώτη φορά στο ελληνικό κοινό, με τέσσερα
+                λαχταριστά προϊόντα, το Crispy Chic Burger, το Lucky Nuggets,
+                το Legendary Burger και το Magic Mince!
+            </h1>
+            <div class="mode-selector">
+                <button onclick="setLightMode()"></button>
+                <button onclick="setDarkMode()"></button>
+            </div>
+        </div>
         <section>
             <h3>
                 Ο ανατρεπτικός κόσμος του The Vegetarian Butcher, συνδυάζει την παραδοσιακή
@@ -213,7 +215,7 @@
                         </a>
                     </li>
                 </ul>
-                <!-- Mirrors the content above -->
+
                 <ul class="marquee__content scroll" aria-hidden="true">
                     <li>
                         <a href="https://www.capital.gr" target="_blank">
@@ -319,25 +321,25 @@
 
         // <----------------------- Scroll animation effect -------------------->
 
-        let calcScrollValue = () => {
-            let scrollProgress = document.getElementById("progress");
-            let progressValue = document.getElementById("progress-value")
-            let pos = document.documentElement.scrollTop;
-            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        // let calcScrollValue = () => {
+        //     let scrollProgress = document.getElementById("progress");
+        //     let progressValue = document.getElementById("progress-value")
+        //     let pos = document.documentElement.scrollTop;
+        //     let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-            let scrollValue = Math.round((pos * 100) / calcHeight)
+        //     let scrollValue = Math.round((pos * 100) / calcHeight)
 
-            /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
-            scrollProgress.addEventListener("click", () => {
-                document.documentElement.scrollTop = 0;
-            });
+        //     /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
+        //     scrollProgress.addEventListener("click", () => {
+        //         document.documentElement.scrollTop = 0;
+        //     });
 
 
-            scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-        }
+        //     scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+        // }
 
-        window.onscroll = calcScrollValue;
-        window.onload = calcScrollValue
+        // window.onscroll = calcScrollValue;
+        // window.onload = calcScrollValue
 
         // <----------------------------------------------------------------------->
 
@@ -346,45 +348,56 @@
 
         // <----------------------- Same height elements functionality -------------------->
 
-        window.addEventListener('DOMContentLoaded', function () {
-            var headerH1 = document.querySelector('header h1');
-            var figure = document.querySelector('aside figure');
+        // window.addEventListener('DOMContentLoaded', function () {
+        //     var headerH1 = document.querySelector('header h1');
+        //     var figure = document.querySelector('aside figure');
 
-            function setFigureHeight() {
-                figure.style.height = headerH1.offsetHeight + 'px';
-            }
+        //     function setFigureHeight() {
+        //         figure.style.height = headerH1.offsetHeight + 'px';
+        //     }
 
-            setFigureHeight();
-            window.addEventListener('resize', setFigureHeight);
-        });
+        //     setFigureHeight();
+        //     window.addEventListener('resize', setFigureHeight);
+        // });
 
-        window.addEventListener('DOMContentLoaded', function () {
-            var asideH5 = document.querySelector('aside h5');
-            var mainH3 = document.querySelector('main section:first-child h3');
+        // window.addEventListener('DOMContentLoaded', function () {
+        //     var asideH5 = document.querySelector('aside h5');
+        //     var mainH3 = document.querySelector('main section:first-child h3');
 
-            function setMainH3Height() {
-                mainH3.style.height = asideH5.offsetHeight + 'px';
-            }
+        //     function setMainH3Height() {
+        //         mainH3.style.height = asideH5.offsetHeight + 'px';
+        //     }
 
-            setMainH3Height();
-            window.addEventListener('resize', setMainH3Height);
-        });
+        //     setMainH3Height();
+        //     window.addEventListener('resize', setMainH3Height);
+        // });
 
-        window.addEventListener('DOMContentLoaded', function () {
-            var figure = document.querySelector('section:nth-child(3) figure');
-            var p = document.querySelector('section:nth-child(3) p');
+        // window.addEventListener('DOMContentLoaded', function () {
+        //     var figure = document.querySelector('section:nth-child(3) figure');
+        //     var p = document.querySelector('section:nth-child(3) p');
 
-            function setFigureHeightAndWidth() {
-                var height = p.offsetHeight;
-                figure.style.height = height + 'px';
-                figure.style.width = height + 'px';
-            }
+        //     function setFigureHeightAndWidth() {
+        //         var height = p.offsetHeight;
+        //         figure.style.height = height + 'px';
+        //         figure.style.width = height + 'px';
+        //     }
 
-            setFigureHeightAndWidth();
-            window.addEventListener('resize', setFigureHeightAndWidth);
-        });
+        //     setFigureHeightAndWidth();
+        //     window.addEventListener('resize', setFigureHeightAndWidth);
+        // });
 
         // <----------------------------------------------------------------------->
+        // window.onload = () => {
+        //     let footerHeight = document.querySelector("footer").getBoundingClientRect().height
+        //     let aside = document.querySelector(".aside-content")
+        //     window.addEventListener('scroll', () => {
+
+        //         if (scrollY + innerHeight >= document.body.scrollHeight - footerHeight) {
+        //             aside.style.top = -((scrollY + innerHeight) - (document.body.scrollHeight - footerHeight))+"px"
+        //         }
+        //     })
+
+        // }
 
     </script>
 </body>
