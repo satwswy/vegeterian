@@ -52,12 +52,18 @@ aside {
   position: relative;
 }
 aside section {
-  display: flex;
-  flex-direction: column;
-  position: relative;
   height: 100%;
 }
-aside section h5 {
+aside section .sticky-content {
+  position: sticky;
+  bottom: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+aside section .sticky-content h5 {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -66,17 +72,10 @@ aside section h5 {
   line-height: 1.5;
   font-size: 14px;
 }
-aside section span:nth-child(2) {
+aside section .sticky-content h5 span:nth-child(2) {
   color: rgb(103, 19, 17);
 }
-aside section figure {
-  margin-bottom: 300px;
-  margin-top: 50px;
-}
-aside section figure img {
-  width: 80%;
-}
-aside section #progress {
+aside section .sticky-content #progress {
   height: 110px;
   width: 110px;
   display: grid;
@@ -84,10 +83,9 @@ aside section #progress {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  position: sticky;
   z-index: 1;
 }
-aside section #progress #progress-value {
+aside section .sticky-content #progress #progress-value {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
@@ -99,7 +97,7 @@ aside section #progress #progress-value {
   color: #001a2e;
   position: relative;
 }
-aside section #progress #progress-value::after {
+aside section .sticky-content #progress #progress-value::after {
   content: "";
   width: 30px;
   height: 50px;
@@ -109,7 +107,7 @@ aside section #progress #progress-value::after {
   inset: 0;
   margin: auto;
 }
-aside section #progress #progress-value::before {
+aside section .sticky-content #progress #progress-value::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -119,6 +117,14 @@ aside section #progress #progress-value::before {
   top: 30px;
   z-index: 5;
 }
+aside section figure {
+  margin-bottom: 300px;
+  width: 80%;
+  padding-top: 50px;
+}
+aside section figure img {
+  width: 100%;
+}
 
 header {
   grid-column: 2/2;
@@ -127,6 +133,7 @@ header {
   padding-right: 50px;
   display: flex;
   justify-content: space-between;
+  padding-left: 100px;
 }
 header > h1 {
   margin-bottom: 300px;
@@ -151,12 +158,14 @@ header .mode-selector > button:first-child {
   margin-right: 3px;
 }
 header .mode-selector > button:not(:first-child) {
+  border: 2px solid black;
   background-color: black;
 }
 
 main {
   grid-column: 2/2;
   grid-row: 2/2;
+  padding-left: 100px;
 }
 main section:first-child {
   display: flex;

@@ -20,13 +20,15 @@
             <figure id="logo-figure">
                 <img src="./assets/logo_10.jpg" alt="logo image">
             </figure>
-            <h5>
-                <span>Περισσότερα για τα νέα προϊόντα αλλά και λαχταριστές συνταγές στο www.thevegetarianbutcher.gr
-                </span>
-                <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
-            </h5>
-            <div id="progress">
-                <span id="progress-value"></span>
+            <div class="sticky-content">
+                <h5>
+                    <span>Περισσότερα για τα νέα προϊόντα αλλά και λαχταριστές συνταγές στο www.thevegetarianbutcher.gr
+                    </span>
+                    <span>#SacrificeNothing <br>#TheVegetarianButcher.gr</span>
+                </h5>
+                <div id="progress">
+                    <span id="progress-value"></span>
+                </div>
             </div>
         </section>
     </aside>
@@ -290,7 +292,7 @@
             document.getElementById("aside").classList.add("light-mode");
             document.querySelector(".marquee").style.backgroundColor = "rgb(7,7,7)"
             document.querySelector("header .mode-selector > button:first-child").style.border = "2px solid black"
-            document.querySelector("header .mode-selector > button:not(:first-child)").style.outline = "none"
+            document.querySelector("header .mode-selector > button:not(:first-child)").style.border = "2px solid black"
             document.querySelector("aside section span:nth-child(2)").style.color = "rgb(103,19,17)"
         }
 
@@ -302,8 +304,8 @@
             document.getElementById("header").classList.add("dark-mode");
             document.getElementById("aside").classList.add("dark-mode");
             document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
-            document.querySelector("header .mode-selector > button:first-child").style.border = "none"
-            document.querySelector("header .mode-selector > button:not(:first-child)").style.border = "1px solid white"
+            document.querySelector("header .mode-selector > button:first-child").style.border = "2px solid white"
+            document.querySelector("header .mode-selector > button:not(:first-child)").style.border = "2px solid white"
             document.querySelector("aside section span:nth-child(2)").style.color = "white"
         }
 
