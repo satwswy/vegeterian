@@ -73,7 +73,7 @@ header > div figure img {
 header > div > div {
   width: 100%;
   font-size: 13px;
-  padding-right: 1vw;
+  padding-right: 2vw;
   height: 270px;
   display: flex;
   flex-direction: column;
@@ -176,14 +176,14 @@ main section:nth-child(2) nav {
   display: flex;
   gap: 12px;
 }
-main section:nth-child(2) nav div.svg-wrapper {
+main section:nth-child(2) nav a {
   position: relative;
   width: 70px;
   height: 70px;
   background-color: rgb(236, 236, 236);
   border-radius: 50%;
 }
-main section:nth-child(2) nav div.svg-wrapper svg {
+main section:nth-child(2) nav a svg {
   position: absolute;
   top: 0;
   right: 0;
@@ -280,8 +280,8 @@ main section:nth-child(4) p {
   gap: 15px;
 }
 main section:nth-child(4) p span:first-child {
-  line-height: 1.2;
-  font-size: 24px;
+  line-height: 1.4;
+  font-size: 22px;
 }
 main section:nth-child(4) p span:last-child {
   font-size: 14px;
@@ -352,6 +352,18 @@ footer ul {
 .white-mode {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1400px) {
+  main section:nth-child(5) {
+    padding-right: 20px;
+  }
+  main section:nth-child(4) p span:first-child {
+    font-size: 19px;
+  }
+  main section:nth-child(3) figure h2 {
+    font-size: 40px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

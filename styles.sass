@@ -61,7 +61,7 @@ header > div
   >div
     width: 100%
     font-size: 13px
-    padding-right: 1vw
+    padding-right: 2vw
     height: $rhaside
     display: flex
     flex-direction: column
@@ -150,7 +150,7 @@ main
       display: flex
       gap: 12px
 
-      div.svg-wrapper
+      a
         position: relative
         width: 70px
         height: 70px
@@ -239,8 +239,8 @@ main
       flex-direction: column
       gap: 15px
       span:first-child
-        line-height: 1.2
-        font-size: 24px
+        line-height: 1.4
+        font-size: 22px
 
       span:last-child
         font-size: 14px
@@ -300,3 +300,13 @@ footer
 .white-mode
   background-color: white
   color: black
+
+// Styles for responsive layout
+
+@media screen and (max-width: 1600px) and (min-width: 1400px)
+  main section:nth-child(5)
+    padding-right: 20px
+  main section:nth-child(4) p span:first-child
+    font-size: 19px
+  main section:nth-child(3) figure h2
+    font-size: 40px
