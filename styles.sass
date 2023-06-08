@@ -42,7 +42,7 @@ body
   min-height: 100vh
   margin: 0 auto
   display: grid
-  grid-template-columns: minmax(220px,16%) 1fr
+  grid-template-columns: minmax(250px,16%) 1fr
 header > div
   position: sticky
   top: 0
@@ -304,9 +304,39 @@ footer
 // Styles for responsive layout
 
 @media screen and (max-width: 1600px) and (min-width: 1400px)
-  main section:nth-child(5)
-    padding-right: 20px
-  main section:nth-child(4) p span:first-child
-    font-size: 19px
+  main .intro h1
+    font-size: 38px
   main section:nth-child(3) figure h2
     font-size: 40px
+  main section:nth-child(4) p span:first-child
+    font-size: 19px
+  main section:nth-child(5)
+    padding-right: 20px
+
+@media screen and (max-width: 1400px) and (min-width: 1200px)
+  main section:nth-child(3) figure:nth-child(2) a img, main section:nth-child(3) figure:nth-child(3) a img, main section:nth-child(3) figure:nth-child(6) a img
+    padding: 60px
+  main section:nth-child(3) figure h2
+    bottom: 20px
+    left: 20px
+    width: 80%
+    font-size: 36px
+  main section:nth-child(4)
+    margin-top: 100px
+    gap: 50px
+    p
+      width: 65%
+      gap: 40px
+      span
+        width: 100%
+        &:first-child
+          font-size: 20px
+  main section:nth-child(5)
+    margin-top: 75px
+    padding-right: 0px
+    flex-direction: column
+    gap: 30px
+  header > div
+    padding-left: 20px
+    >div
+      padding-right: 40px
