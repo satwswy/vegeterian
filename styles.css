@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -44,7 +52,7 @@ body {
   grid-template-columns: minmax(220px, 16%) 1fr;
 }
 
-.aside-content {
+header > div {
   position: sticky;
   top: 0;
   display: flex;
@@ -54,27 +62,31 @@ body {
   z-index: 100;
   padding-block: 50px;
   padding-left: 50px;
-  background-color: yellow;
 }
-.aside-content figure {
+header > div figure {
   width: 80%;
 }
-.aside-content figure img {
+header > div figure img {
   width: 100%;
   height: auto;
 }
-.aside-content > div {
+header > div > div {
   width: 100%;
   font-size: 13px;
   padding-right: 1vw;
-  background-color: lightgrey;
   height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.aside-content #progress {
-  width: 70%;
+header > div > div > h5 span:nth-child(2) {
+  color: rgb(103, 19, 17);
+  display: inline-block;
+  margin-top: 15px;
+}
+header > div #progress {
+  width: 110px;
+  height: 110px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
@@ -82,7 +94,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.aside-content #progress #progress-value {
+header > div #progress #progress-value {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
@@ -94,7 +106,7 @@ body {
   color: #001a2e;
   position: relative;
 }
-.aside-content #progress #progress-value::after {
+header > div #progress #progress-value::after {
   content: "";
   width: 30px;
   height: 50px;
@@ -104,7 +116,7 @@ body {
   inset: 0;
   margin: auto;
 }
-.aside-content #progress #progress-value::before {
+header > div #progress #progress-value::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -116,7 +128,6 @@ body {
 }
 
 main {
-  background-color: aquamarine;
   padding-top: 50px;
 }
 main .intro {
@@ -124,12 +135,11 @@ main .intro {
   justify-content: space-between;
   padding-right: 50px;
   width: 100%;
-  background-color: red;
   height: calc(100vh - 270px - 100px);
 }
 main .intro h1 {
   width: 80%;
-  font-size: 2.8vw;
+  font-size: 2.5vw;
   line-height: 1.5;
 }
 main .intro .mode-selector {
@@ -249,7 +259,6 @@ main section:nth-child(4) {
   display: flex;
   gap: 150px;
   margin-top: 120px;
-  font-weight: bold;
 }
 main section:nth-child(4) figure {
   position: relative;
@@ -268,11 +277,11 @@ main section:nth-child(4) p {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 50px;
+  gap: 15px;
 }
 main section:nth-child(4) p span:first-child {
-  line-height: 1.5;
+  line-height: 1.2;
+  font-size: 24px;
 }
 main section:nth-child(4) p span:last-child {
   font-size: 14px;
@@ -283,7 +292,6 @@ main section:nth-child(5) {
   margin-top: 100px;
   margin-bottom: 50px;
   padding-right: 160px;
-  font-weight: bold;
 }
 main section:nth-child(5) div {
   display: flex;
@@ -332,14 +340,6 @@ footer ul {
   animation: scroll 30s linear infinite;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
 }

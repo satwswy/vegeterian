@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <aside id="aside">
-        <div class="aside-content">
+    <header id="header">
+        <div>
             <figure id="logo-figure">
                 <img src="./assets/logo_10.jpg" alt="logo image">
             </figure>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-    </aside>
+    </header>
 
     <main id="main">
         <div class="intro">
@@ -285,61 +285,49 @@
     </footer>
     <script>
 
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     var stickyContent = document.querySelector('.sticky-content');
-        //     var distanceFromTop = stickyContent.offsetTop;
-        //     stickyContent.style.position = 'sticky';
-        //     stickyContent.style.top = distanceFromTop + 'px';
-        // });
-
-
         function setLightMode() {
             document.getElementById("main").classList.remove("dark-mode");
             document.getElementById("header").classList.remove("dark-mode");
-            document.getElementById("aside").classList.remove("dark-mode");
             document.getElementById("main").classList.add("light-mode");
             document.getElementById("header").classList.add("light-mode");
-            document.getElementById("aside").classList.add("light-mode");
             document.querySelector(".marquee").style.backgroundColor = "rgb(7,7,7)"
-            document.querySelector("header .mode-selector > button:first-child").style.border = "2px solid black"
-            document.querySelector("header .mode-selector > button:not(:first-child)").style.border = "2px solid black"
-            document.querySelector("aside section span:nth-child(2)").style.color = "rgb(103,19,17)"
+            document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid black"
+            document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid black"
+            document.querySelector("header > div > div > h5 span:nth-child(2)").style.color = "rgb(103,19,17)"
         }
 
         function setDarkMode() {
             document.getElementById("main").classList.remove("light-mode");
             document.getElementById("header").classList.remove("light-mode");
-            document.getElementById("aside").classList.remove("light-mode");
             document.getElementById("main").classList.add("dark-mode");
             document.getElementById("header").classList.add("dark-mode");
-            document.getElementById("aside").classList.add("dark-mode");
             document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
-            document.querySelector("header .mode-selector > button:first-child").style.border = "2px solid white"
-            document.querySelector("header .mode-selector > button:not(:first-child)").style.border = "2px solid white"
-            document.querySelector("aside section span:nth-child(2)").style.color = "white"
+            document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid white"
+            document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid white"
+            document.querySelector("header > div > div > h5 span:nth-child(2)").style.color = "white"
         }
 
         // <----------------------- Scroll animation effect -------------------->
 
-        // let calcScrollValue = () => {
-        //     let scrollProgress = document.getElementById("progress");
-        //     let progressValue = document.getElementById("progress-value")
-        //     let pos = document.documentElement.scrollTop;
-        //     let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value")
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-        //     let scrollValue = Math.round((pos * 100) / calcHeight)
+            let scrollValue = Math.round((pos * 100) / calcHeight)
 
-        //     /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
-        //     scrollProgress.addEventListener("click", () => {
-        //         document.documentElement.scrollTop = 0;
-        //     });
+            /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
+            scrollProgress.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
+            });
 
 
-        //     scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-        // }
+            scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+        }
 
-        // window.onscroll = calcScrollValue;
-        // window.onload = calcScrollValue
+        window.onscroll = calcScrollValue;
+        window.onload = calcScrollValue
 
         // <----------------------------------------------------------------------->
 
@@ -348,43 +336,19 @@
 
         // <----------------------- Same height elements functionality -------------------->
 
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     var headerH1 = document.querySelector('header h1');
-        //     var figure = document.querySelector('aside figure');
+        window.addEventListener('DOMContentLoaded', function () {
+            var figure = document.querySelector('section:nth-child(4) figure');
+            var p = document.querySelector('section:nth-child(4) p');
 
-        //     function setFigureHeight() {
-        //         figure.style.height = headerH1.offsetHeight + 'px';
-        //     }
+            function setFigureHeightAndWidth() {
+                var height = p.offsetHeight;
+                figure.style.height = height + 'px';
+                figure.style.width = height + 'px';
+            }
 
-        //     setFigureHeight();
-        //     window.addEventListener('resize', setFigureHeight);
-        // });
-
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     var asideH5 = document.querySelector('aside h5');
-        //     var mainH3 = document.querySelector('main section:first-child h3');
-
-        //     function setMainH3Height() {
-        //         mainH3.style.height = asideH5.offsetHeight + 'px';
-        //     }
-
-        //     setMainH3Height();
-        //     window.addEventListener('resize', setMainH3Height);
-        // });
-
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     var figure = document.querySelector('section:nth-child(3) figure');
-        //     var p = document.querySelector('section:nth-child(3) p');
-
-        //     function setFigureHeightAndWidth() {
-        //         var height = p.offsetHeight;
-        //         figure.style.height = height + 'px';
-        //         figure.style.width = height + 'px';
-        //     }
-
-        //     setFigureHeightAndWidth();
-        //     window.addEventListener('resize', setFigureHeightAndWidth);
-        // });
+            setFigureHeightAndWidth();
+            window.addEventListener('resize', setFigureHeightAndWidth);
+        });
 
         // <----------------------------------------------------------------------->
         // window.onload = () => {
