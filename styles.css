@@ -404,6 +404,9 @@ footer ul {
   header > div > div {
     padding-right: 40px;
   }
+  main .intro h1 {
+    font-size: 34px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
