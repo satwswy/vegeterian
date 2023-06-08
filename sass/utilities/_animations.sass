@@ -1,0 +1,12 @@
+@keyframes scroll
+    from
+        transform: translateX(0)
+
+    to
+        transform: translateX(calc(-100% - var(--gap)))
+
+.scroll
+    animation: scroll 30s linear infinite
+
+.marquee-2.scroll
+    animation: scroll 25s linear infinite reverse
