@@ -3,7 +3,7 @@ main
   .intro
     display: flex
     justify-content: space-between
-    padding-right: 50px
+
     width: 100%
     height: calc( 100vh - $rhaside - 100px )
     h1
@@ -13,7 +13,6 @@ main
   section:nth-child(2)
     display: flex
     justify-content: space-between
-    padding-right: 50px
     h3
       width: 70%
       font-size: 20px
@@ -22,14 +21,12 @@ main
     nav
       display: flex
       gap: 12px
-
       a
         position: relative
         width: 70px
         height: 70px
         background-color: rgb(236, 236, 236)
         border-radius: 50%
-
         svg
           position: absolute
           top: 0
@@ -39,62 +36,37 @@ main
           margin: auto
           width: 25px
           height: 25px
-
   section:nth-child(3)
     display: flex
     flex-wrap: wrap
     margin-top: 50px
     figure
-      padding: 0
-      margin: 0
-      box-sizing: border-box
+      flex-basis: 100%
       position: relative
-      width: 100%
       &:first-child
         a
           filter: brightness(0.7)
-      &:nth-child(2)
-        background-color: rgb(103, 19, 17)
-        a
-          display: block
-          img
-            padding-bottom: 100px
+      &:nth-child(2n+2)
+        background-color: rgb(103, 19, 17) 
       &:nth-child(3)
         a
           filter: brightness(0.7)
-      &:nth-child(4)
-        background-color: rgb(162, 86, 34)
-        a
-          display: block
-          img
-            padding-bottom: 100px
       &:nth-child(5)
         a
           filter: brightness(0.7)
-      &:nth-child(6)
-        background-color: rgb(116, 122, 52)
-        a
-          display: block
-          img
-            padding-bottom: 100px
       h2
         position: absolute
-        bottom: 50px
-        left: 50px
-        font-size: 48px
+        bottom: 5%
+        left: 5%
+        font-size: clamp(1.5rem,3.5vw + 0.1rem,3rem)
         color: rgb(255, 255, 255)
         width: 50%
-      img
-        height: 100%
-        object-fit: cover
-        object-position: center
-        width: 100%
-
   section:nth-child(4)
     display: flex
     align-items: center
     gap: 150px
     margin-top: 120px
+    flex-wrap: wrap
     figure
       width: 13rem
       aspect-ratio: 1
@@ -108,7 +80,6 @@ main
       position: absolute
       top: 0
       left: 0
-
     p
       width: 50%
       display: flex
@@ -126,10 +97,21 @@ main
     justify-content: space-between
     margin-top: 100px
     margin-bottom: 50px
-    padding-right: 160px
+    flex-wrap: wrap
     div
       display: flex
       gap: 50px
+      flex-wrap: wrap
+
+section:nth-child(3) figure
+  img
+    height: 100%
+    object-fit: cover
+    object-position: center center
+    width: 100%
+
+  &:nth-child(even) img
+    height: min(700px, 80%)
 
 // Styles for responsive layout
 
@@ -139,10 +121,8 @@ main
   main section:nth-child(3) figure:nth-child(4n)
     transform: translateX(-100%)
   main section:nth-child(3) figure
-    flex-basis: 50%  
+    flex-basis: 50%
 @media screen and (max-width: 1599px) and (min-width: 1008px)
-  // main section:nth-child(3) figure:nth-child(2) a img, main section:nth-child(3) figure:nth-child(3) a img, main section:nth-child(3) figure:nth-child(6) a img
-  //   padding: 60px
   main section:nth-child(3) figure h2
     width: 80%
     font-size: 40px
@@ -169,5 +149,32 @@ main
     font-size: 34px
 
 @media screen and (max-width: 1007px) and (min-width: 641)
-
+#header
+  position: sticky
+  top: 0px  
+  z-index: 500
+body
+  display: unset  
+header > div 
+  flex-direction: row
+  height: auto
+  flex-wrap: wrap
+  justify-content: unset
+  gap: 30px
+  padding-block: 20px
+  padding-left: 20px
+  background-color: white
+  >div
+    width: 150px  
+header > div #progress
+  display: none  
+header > div figure
+  width: 150px  
+  img
+    width: max(150px,70%)
+.mode-selector
+  position: fixed
+  top: 20px
+  right: 20px
+  z-index: 5001
 @media screen and (max-width: 640px)

@@ -126,7 +126,6 @@ main {
 main .intro {
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
   width: 100%;
   height: calc(100vh - 270px - 100px);
 }
@@ -138,7 +137,6 @@ main .intro h1 {
 main section:nth-child(2) {
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
 }
 main section:nth-child(2) h3 {
   width: 70%;
@@ -173,67 +171,35 @@ main section:nth-child(3) {
   margin-top: 50px;
 }
 main section:nth-child(3) figure {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  flex-basis: 100%;
   position: relative;
-  width: 100%;
 }
 main section:nth-child(3) figure:first-child a {
   filter: brightness(0.7);
 }
-main section:nth-child(3) figure:nth-child(2) {
+main section:nth-child(3) figure:nth-child(2n+2) {
   background-color: rgb(103, 19, 17);
-}
-main section:nth-child(3) figure:nth-child(2) a {
-  display: block;
-}
-main section:nth-child(3) figure:nth-child(2) a img {
-  padding-bottom: 100px;
 }
 main section:nth-child(3) figure:nth-child(3) a {
   filter: brightness(0.7);
 }
-main section:nth-child(3) figure:nth-child(4) {
-  background-color: rgb(162, 86, 34);
-}
-main section:nth-child(3) figure:nth-child(4) a {
-  display: block;
-}
-main section:nth-child(3) figure:nth-child(4) a img {
-  padding-bottom: 100px;
-}
 main section:nth-child(3) figure:nth-child(5) a {
   filter: brightness(0.7);
 }
-main section:nth-child(3) figure:nth-child(6) {
-  background-color: rgb(116, 122, 52);
-}
-main section:nth-child(3) figure:nth-child(6) a {
-  display: block;
-}
-main section:nth-child(3) figure:nth-child(6) a img {
-  padding-bottom: 100px;
-}
 main section:nth-child(3) figure h2 {
   position: absolute;
-  bottom: 50px;
-  left: 50px;
-  font-size: 48px;
+  bottom: 5%;
+  left: 5%;
+  font-size: clamp(1.5rem, 3.5vw + 0.1rem, 3rem);
   color: rgb(255, 255, 255);
   width: 50%;
-}
-main section:nth-child(3) figure img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
 }
 main section:nth-child(4) {
   display: flex;
   align-items: center;
   gap: 150px;
   margin-top: 120px;
+  flex-wrap: wrap;
 }
 main section:nth-child(4) figure {
   width: 13rem;
@@ -268,11 +234,22 @@ main section:nth-child(5) {
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 50px;
-  padding-right: 160px;
+  flex-wrap: wrap;
 }
 main section:nth-child(5) div {
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
+}
+
+section:nth-child(3) figure img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+section:nth-child(3) figure:nth-child(even) img {
+  height: min(700px, 80%);
 }
 
 @media screen and (min-width: 1008px) {
@@ -321,6 +298,48 @@ main section:nth-child(5) div {
     font-size: 34px;
   }
 }
+#header {
+  position: sticky;
+  top: 0px;
+  z-index: 500;
+}
+
+body {
+  display: unset;
+}
+
+header > div {
+  flex-direction: row;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: unset;
+  gap: 30px;
+  padding-block: 20px;
+  padding-left: 20px;
+  background-color: white;
+}
+header > div > div {
+  width: 150px;
+}
+
+header > div #progress {
+  display: none;
+}
+
+header > div figure {
+  width: 150px;
+}
+header > div figure img {
+  width: max(150px, 70%);
+}
+
+.mode-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 5001;
+}
+
 footer {
   background-color: rgb(7, 7, 7);
   grid-row: 2/2;
