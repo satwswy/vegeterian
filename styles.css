@@ -173,11 +173,11 @@ main section:nth-child(3) {
   margin-top: 50px;
 }
 main section:nth-child(3) figure {
-  flex-basis: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   position: relative;
+  width: 100%;
 }
 main section:nth-child(3) figure:first-child a {
   filter: brightness(0.7);
