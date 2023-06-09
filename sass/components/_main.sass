@@ -58,13 +58,13 @@ main
         a
           display: block
           img
-            padding: 100px
+            padding-bottom: 100px
       &:nth-child(3)
         background-color: rgb(162, 86, 34)
         a
           display: block
           img
-            padding: 100px
+            padding-bottom: 100px
       &:nth-child(4)
         a
           filter: brightness(0.7)
@@ -76,7 +76,7 @@ main
         a
           display: block
           img
-            padding: 100px
+            padding-bottom: 100px
       h2
         position: absolute
         bottom: 50px
@@ -92,6 +92,7 @@ main
 
   section:nth-child(4)
     display: flex
+    align-items: center
     gap: 150px
     margin-top: 120px
     figure
@@ -128,46 +129,40 @@ main
     padding-right: 160px
     div
       display: flex
-      gap: 30px
+      gap: 50px
 
 // Styles for responsive layout
 
-@media screen and (max-width: 1600px) and (min-width: 1400px)
-  // main .intro h1
-  //   font-size: 38px
-  // main section:nth-child(3) figure h2
-  //   font-size: 40px
-  // main section:nth-child(4) p span:first-child
-  //   font-size: 19px
-  // main section:nth-child(5)
-  //   padding-right: 20px
+@media screen and (min-width: 1600px)
 
-@media screen and (max-width: 1400px) and (min-width: 1200px)
+@media screen and (max-width: 1599px) and (min-width: 1008px)
   // main section:nth-child(3) figure:nth-child(2) a img, main section:nth-child(3) figure:nth-child(3) a img, main section:nth-child(3) figure:nth-child(6) a img
   //   padding: 60px
-  // main section:nth-child(3) figure h2
-  //   bottom: 20px
-  //   left: 20px
-  //   width: 80%
-  //   font-size: 36px
-  // main section:nth-child(4)
-  //   margin-top: 100px
-  //   gap: 50px
-  //   p
-  //     width: 65%
-  //     gap: 40px
-  //     span
-  //       width: 100%
-  //       &:first-child
-  //         font-size: 20px
-  // main section:nth-child(5)
-  //   margin-top: 75px
-  //   padding-right: 0px
-  //   flex-direction: column
-  //   gap: 30px
-  // header > div
-  //   padding-left: 20px
-  //   >div
-  //     padding-right: 40px
-  // main .intro h1
-  //   font-size: 34px    
+  main section:nth-child(3) figure h2
+    width: 80%
+    font-size: 40px
+  main section:nth-child(4)
+    margin-top: 100px
+    gap: 50px
+    p
+      width: 65%
+      gap: 40px
+      span
+        width: 100%
+        &:first-child
+          font-size: 20px
+  main section:nth-child(5)
+    margin-top: 75px
+    padding-right: 0px
+    flex-direction: column
+    gap: 30px
+  header > div
+    padding-left: 20px
+    >div
+      padding-right: 40px
+  main .intro h1
+    font-size: 34px
+
+@media screen and (max-width: 1007px) and (min-width: 641)
+
+@media screen and (max-width: 640px)
