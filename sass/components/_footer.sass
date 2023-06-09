@@ -1,41 +1,45 @@
 footer
-    background-color: rgb(7, 7, 7)
-    grid-row: 2/2
-    grid-column: 1/-1
-    .marquees-wrapper
-        overflow-x: hidden
-        &:hover ul
-            animation-play-state: paused
-        .marquee
-            gap: 100px
-            margin-top: 10px
-            display: flex
-            background: rgb(7, 7, 7)
-            user-select: none
-            .marquee__content
-                flex-shrink: 0
-                display: flex
-                justify-content: space-around
-                min-width: 100%
-                gap: 100px
+  background-color: rgb(7, 7, 7)
+  grid-row: 2/2
+  grid-column: 1/-1
+  ul
+    display: flex
+    gap: 100px
+    color: white
+    white-space: nowrap
+    font-size: 32px
+    padding-block: 50px
 
-            .scroll
-                animation: scroll 30s linear infinite
-            ul
-                display: flex
-                gap: 100px
-                color: white
-                white-space: nowrap
-                font-size: 32px
-                padding-block: 50px
-        .marquee-2
-            &.scroll
-                animation: scroll 25s linear infinite reverse
+.marquees-wrapper
+  overflow-x: hidden
+  &:hover ul
+    animation-play-state: paused
+.marquee
+  --gap: 100px
+  margin-top: 10px
+  display: flex
+  gap: var(--gap)
+  background: rgb(7, 7, 7)
+  user-select: none
+
+.marquee__content
+  flex-shrink: 0
+  display: flex
+  justify-content: space-around
+  min-width: 100%
+  gap: 100px
+
+.scroll
+  animation: scroll 30s linear infinite
+
+.marquee-2
+  &.scroll
+    animation: scroll 25s linear infinite reverse
 
 .dark-mode
-    background-color: black
-    color: white
+  background-color: black
+  color: white
 
 .white-mode
-    background-color: white
-    color: black
+  background-color: white
+  color: black
