@@ -173,7 +173,7 @@ main section:nth-child(3) {
   margin-top: 50px;
 }
 main section:nth-child(3) figure {
-  flex-basis: 50%;
+  flex-basis: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -191,17 +191,17 @@ main section:nth-child(3) figure:nth-child(2) a {
 main section:nth-child(3) figure:nth-child(2) a img {
   padding-bottom: 100px;
 }
-main section:nth-child(3) figure:nth-child(3) {
+main section:nth-child(3) figure:nth-child(3) a {
+  filter: brightness(0.7);
+}
+main section:nth-child(3) figure:nth-child(4) {
   background-color: rgb(162, 86, 34);
 }
-main section:nth-child(3) figure:nth-child(3) a {
+main section:nth-child(3) figure:nth-child(4) a {
   display: block;
 }
-main section:nth-child(3) figure:nth-child(3) a img {
+main section:nth-child(3) figure:nth-child(4) a img {
   padding-bottom: 100px;
-}
-main section:nth-child(3) figure:nth-child(4) a {
-  filter: brightness(0.7);
 }
 main section:nth-child(3) figure:nth-child(5) a {
   filter: brightness(0.7);
@@ -275,6 +275,17 @@ main section:nth-child(5) div {
   gap: 50px;
 }
 
+@media screen and (min-width: 1008px) {
+  main section:nth-child(3) figure:nth-child(4n-1) {
+    transform: translateX(100%);
+  }
+  main section:nth-child(3) figure:nth-child(4n) {
+    transform: translateX(-100%);
+  }
+  main section:nth-child(3) figure {
+    flex-basis: 50%;
+  }
+}
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
   main section:nth-child(3) figure h2 {
     width: 80%;
