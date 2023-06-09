@@ -120,26 +120,6 @@ header > div #progress #progress-value::before {
   z-index: 5;
 }
 
-.mode-selector {
-  display: flex;
-  gap: 3px;
-  height: 260px;
-}
-.mode-selector > button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.mode-selector > button:first-child {
-  border: 2px solid black;
-  margin-right: 3px;
-}
-.mode-selector > button:not(:first-child) {
-  border: 2px solid black;
-  background-color: black;
-}
-
 main {
   padding-top: 50px;
 }
@@ -364,6 +344,26 @@ footer ul {
 
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
+}
+
+.mode-selector {
+  display: flex;
+  gap: 3px;
+  height: 260px;
+}
+.mode-selector > button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mode-selector > button:first-child {
+  border: 2px solid black;
+  margin-right: 3px;
+}
+.mode-selector > button:not(:first-child) {
+  border: 2px solid black;
+  background-color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
