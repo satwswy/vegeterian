@@ -144,7 +144,7 @@ header > div #progress #progress-value::before {
     flex-wrap: wrap;
     justify-content: unset;
     gap: 30px;
-    padding: 20px;
+    padding: 20px 20px 50px 20px;
     background-color: white;
   }
   header > div > div {
@@ -367,6 +367,7 @@ section:nth-child(3) figure:nth-child(even) img {
     padding-right: 0px;
     flex-direction: column;
     gap: 50px;
+    margin-bottom: 60px;
   }
 }
 footer {
