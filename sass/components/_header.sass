@@ -1,3 +1,5 @@
+// Styles for default layout
+
 header > div
   position: sticky
   top: 0
@@ -5,14 +7,17 @@ header > div
   flex-direction: column
   justify-content: space-between
   height: 100vh
-  z-index: 100
+  z-index: 1
   padding-block: 50px
   padding-left: 50px
+
   figure
     width: 80%
+
     img
       width: 100%
       height: auto
+
   >div
     width: 100%
     font-size: 13px
@@ -21,10 +26,12 @@ header > div
     display: flex
     flex-direction: column
     justify-content: space-between
+
     >h5 span:nth-child(2)
       color: rgb(103, 19, 17)
       display: inline-block
       margin-top: 15px
+
   #progress
     width: 110px
     height: 110px
@@ -34,6 +41,7 @@ header > div
     border-radius: 50%
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
     cursor: pointer
+
     #progress-value
       display: block
       height: calc( 100% - 15px )
@@ -45,6 +53,7 @@ header > div
       font-size: 35px
       color: #001a2e
       position: relative
+
       &::after
         content: ""
         width: 30px
@@ -54,6 +63,7 @@ header > div
         position: absolute
         inset: 0
         margin: auto
+
       &::before
         content: ""
         width: 6px
@@ -65,37 +75,43 @@ header > div
         z-index: 5
 
 
+// Styles for responsive layout
 
+@media screen and (max-width: 1599px) and (min-width: 1008px)
+  header > div
+    padding-left: 20px
 
-  // Styles for responsive layout
-
-
-  @media screen and (max-width: 1599px) and (min-width: 1008px)
-    header > div
-      padding-left: 20px
     >div
       padding-right: 40px
-  @media screen and (max-width: 1007px) and (min-width: 641)
-    #header
-      position: sticky
-      top: 0px  
-      z-index: 500
-    header > div 
-      flex-direction: row
-      height: auto
-      flex-wrap: wrap
-      justify-content: unset
-      gap: 30px
-      padding-block: 20px
-      padding-left: 20px
-      background-color: white
-      >div
-        width: 150px  
-    header > div #progress
-      display: none  
-    header > div figure
-      width: 150px  
-      img
-        width: max(150px,70%)  
-  @media screen and (max-width: 640px)
+
+@media screen and (max-width: 1007px) and (min-width: 641px)
+  #header
+    position: sticky
+    top: 0px  
+    z-index: 1
+
+  header > div 
+    flex-direction: row
+    height: auto
+    flex-wrap: wrap
+    justify-content: unset
+    gap: 30px
+    padding: 20px
+    background-color: white
+
+    >div
+      width: 200px
+      height: auto  
+
+  header > div #progress
+    display: none  
+
+  header > div figure
+    width: 150px  
+
+    img
+      width: max(150px,70%)  
+
+@media screen and (max-width: 640px)
+
 

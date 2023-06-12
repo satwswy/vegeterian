@@ -45,11 +45,10 @@ ul {
   margin: 0;
 }
 
-@media screen and (max-width: 1007px) and (min-width: 641) {
-  body {
-    display: unset;
-  }
+body {
+  display: unset;
 }
+
 header > div {
   position: sticky;
   top: 0;
@@ -57,7 +56,7 @@ header > div {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  z-index: 100;
+  z-index: 1;
   padding-block: 50px;
   padding-left: 50px;
 }
@@ -124,40 +123,41 @@ header > div #progress #progress-value::before {
   top: 30px;
   z-index: 5;
 }
+
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
-  header > div header > div {
+  header > div {
     padding-left: 20px;
   }
   header > div > div {
     padding-right: 40px;
   }
 }
-@media screen and (max-width: 1007px) and (min-width: 641) {
-  header > div #header {
+@media screen and (max-width: 1007px) and (min-width: 641px) {
+  #header {
     position: sticky;
     top: 0px;
-    z-index: 500;
+    z-index: 1;
   }
-  header > div header > div {
+  header > div {
     flex-direction: row;
     height: auto;
     flex-wrap: wrap;
     justify-content: unset;
     gap: 30px;
-    padding-block: 20px;
-    padding-left: 20px;
+    padding: 20px;
     background-color: white;
   }
-  header > div header > div > div {
-    width: 150px;
+  header > div > div {
+    width: 200px;
+    height: auto;
   }
-  header > div header > div #progress {
+  header > div #progress {
     display: none;
   }
-  header > div header > div figure {
+  header > div figure {
     width: 150px;
   }
-  header > div header > div figure img {
+  header > div figure img {
     width: max(150px, 70%);
   }
 }
@@ -320,22 +320,27 @@ section:nth-child(3) figure:nth-child(even) img {
   main section:nth-child(4) p span:first-child {
     font-size: 20px;
   }
-  main section:nth-child(5) {
-    margin-top: 75px;
-    padding-right: 0px;
-    flex-direction: column;
-    gap: 30px;
-  }
-  main .intro h1 {
-    font-size: 34px;
-  }
 }
-@media screen and (max-width: 1007px) and (min-width: 641) {
+main section:nth-child(5) {
+  margin-top: 75px;
+  padding-right: 0px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1007px) and (min-width: 641px) {
+  main {
+    padding: 30px;
+  }
+  main .intro {
+    padding-right: 0px;
+    height: auto;
+  }
   .mode-selector {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 5001;
+    z-index: 2;
   }
 }
 footer {
@@ -428,6 +433,16 @@ footer ul {
 .mode-selector > button:not(:first-child) {
   border: 2px solid black;
   background-color: black;
+}
+
+@media screen and (max-width: 1007px) and (min-width: 641px) {
+  .mode-selector {
+    height: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
