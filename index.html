@@ -329,6 +329,8 @@
         window.onscroll = calcScrollValue;
         window.onload = calcScrollValue
 
+
+
         // <----------------------------------------------------------------------->
 
 
@@ -352,15 +354,22 @@
 
         // <----------------------------------------------------------------------->
         // window.onload = () => {
+        //     let scrollProgress = document.getElementById("progress");
         //     let footerHeight = document.querySelector("footer").getBoundingClientRect().height
-        //     let aside = document.querySelector(".aside-content")
+            // let aside = document.querySelector(".aside-content")
+            // window.addEventListener('scroll', () => {
+            //     console.log(scrollY, innerHeight,document.body.scrollHeight)
+            //     if (scrollY + innerHeight >= document.body.scrollHeight - footerHeight) {
+            //         aside.style.top = -((scrollY + innerHeight) - (document.body.scrollHeight - footerHeight))+"px"
+            //     }
+            // })
         //     window.addEventListener('scroll', () => {
 
-        //         if (scrollY + innerHeight >= document.body.scrollHeight - footerHeight) {
-        //             aside.style.top = -((scrollY + innerHeight) - (document.body.scrollHeight - footerHeight))+"px"
+        //         if (scrollY === document.body.scrollHeight - innerHeight - footerHeight) {
+        //             scrollProgress.style.bottom = "150px"
         //         }
-        //     })
 
+        //     })
         // }
 
     </script>

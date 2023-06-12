@@ -79,12 +79,12 @@ header > div
 
 @media screen and (max-width: 1599px) and (min-width: 1008px)
   header > div
-    padding-left: 20px
+    padding-left: 30px
 
     >div
       padding-right: 40px
 
-@media screen and (max-width: 1007px) and (min-width: 641px)
+@media screen and (max-width: 1007px) and (min-width: 0px)
   #header
     position: sticky
     top: 0px  
@@ -96,7 +96,7 @@ header > div
     flex-wrap: wrap
     justify-content: unset
     gap: 30px
-    padding: 20px 20px 50px 20px
+    padding: 30px 30px 50px 30px
     background-color: white
 
     >div
@@ -109,7 +109,9 @@ header > div
         justify-content: space-between  
 
   header > div #progress
-    display: none  
+    position: fixed
+    bottom: 150px
+    right: 30px  
 
   header > div figure
     width: 150px  
@@ -118,5 +120,9 @@ header > div
       width: max(150px,70%)  
 
 @media screen and (max-width: 640px)
+  header > div #progress
+    display: none
 
+  header > div
+    padding: 30px
 
