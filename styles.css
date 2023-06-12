@@ -156,7 +156,6 @@ header > div #progress #progress-value::before {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
   header > div #progress {
     position: fixed;
@@ -379,6 +378,9 @@ section:nth-child(3) figure img {
     gap: 50px;
     margin-bottom: 0px;
   }
+  main section:nth-child(3) figure:nth-child(2n+2) a img {
+    object-fit: contain;
+  }
 }
 @media screen and (max-width: 640px) and (min-width: 0px) {
   main {
@@ -415,7 +417,7 @@ section:nth-child(3) figure img {
   main section:nth-child(2) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 50px;
   }
   main section:nth-child(2) h3 {
     width: 100%;
@@ -423,6 +425,9 @@ section:nth-child(3) figure img {
   main section:nth-child(5) div {
     flex-direction: column;
     gap: 20px;
+  }
+  main section:nth-child(3) figure:nth-child(2n+2) a img {
+    object-fit: cover;
   }
 }
 footer {
