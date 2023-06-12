@@ -183,7 +183,7 @@ main .intro {
 }
 main .intro h1 {
   width: 80%;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 3rem);
   line-height: 1.5;
 }
 main section:nth-child(2) {
@@ -298,14 +298,14 @@ section:nth-child(3) figure img {
 }
 
 @media screen and (min-width: 1008px) {
+  main section:nth-child(3) figure {
+    flex-basis: 50%;
+  }
   main section:nth-child(3) figure:nth-child(4n-1) {
     transform: translateX(100%);
   }
   main section:nth-child(3) figure:nth-child(4n) {
     transform: translateX(-100%);
-  }
-  main section:nth-child(3) figure {
-    flex-basis: 50%;
   }
 }
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
@@ -350,15 +350,18 @@ section:nth-child(3) figure img {
     align-items: center;
     padding-inline: 20px;
   }
+  main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
+    margin-top: 0px;
+  }
   main section:nth-child(3) {
     gap: 40px;
     background-color: lightgrey;
   }
-  main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
-    margin-top: 0px;
-  }
   main section:nth-child(3) figure {
     height: 500px;
+  }
+  main section:nth-child(3) figure:nth-child(2n+2) a img {
+    object-fit: contain;
   }
   main section:nth-child(3) figure h2 {
     width: 80%;
@@ -377,13 +380,21 @@ section:nth-child(3) figure img {
     gap: 50px;
     margin-bottom: 0px;
   }
-  main section:nth-child(3) figure:nth-child(2n+2) a img {
-    object-fit: contain;
-  }
 }
 @media screen and (max-width: 640px) and (min-width: 0px) {
   main {
     gap: 50px;
+  }
+  main .intro h1 {
+    width: 100%;
+  }
+  main section:nth-child(2) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  main section:nth-child(2) h3 {
+    width: 100%;
   }
   main section:nth-child(3) figure {
     display: flex;
@@ -399,26 +410,15 @@ section:nth-child(3) figure img {
   main section:nth-child(3) figure:nth-child(odd) {
     background-color: black;
   }
+  main section:nth-child(3) figure:nth-child(odd) a {
+    filter: brightness(1);
+  }
   main section:nth-child(3) figure h2 {
     position: relative;
     top: 0;
     left: 10px;
     height: auto;
     padding: 20px 0px;
-  }
-  main section:nth-child(3) figure:nth-child(odd) a {
-    filter: brightness(1);
-  }
-  main .intro h1 {
-    width: 100%;
-  }
-  main section:nth-child(2) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
-  }
-  main section:nth-child(2) h3 {
-    width: 100%;
   }
   main section:nth-child(5) div {
     flex-direction: column;
