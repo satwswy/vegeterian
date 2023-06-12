@@ -125,9 +125,6 @@ section:nth-child(3) figure
     object-position: center center
     width: 100%
 
-  &:nth-child(even) img
-    height: min(700px, 80%)
-
 
 // Styles for responsive layout
 
@@ -180,8 +177,12 @@ section:nth-child(3) figure
     align-items: center
   main section:nth-child(3),main section:nth-child(4),main section:nth-child(5)
     margin-top: 0px
+  main section:nth-child(3) figure
+    height: 400px  
   main section:nth-child(3) figure h2
-    width: 70%  
+    width: 70% 
+  main section:nth-child(3) figure:nth-child(2n+2)
+    padding-inline: 200px   
   main section:nth-child(4)
     gap: 50px
     p
