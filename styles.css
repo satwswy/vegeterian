@@ -137,7 +137,6 @@ header > div #progress #progress-value::before {
     position: sticky;
     top: 0px;
     z-index: 1;
-    padding: 20px;
   }
   header > div {
     flex-direction: row;
@@ -145,8 +144,8 @@ header > div #progress #progress-value::before {
     flex-wrap: wrap;
     justify-content: unset;
     gap: 30px;
+    padding: 20px;
     background-color: white;
-    padding: 0px;
   }
   header > div > div {
     width: 200px;
@@ -351,6 +350,9 @@ section:nth-child(3) figure:nth-child(even) img {
   }
   main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
     margin-top: 0px;
+  }
+  main section:nth-child(3) figure h2 {
+    width: 70%;
   }
   main section:nth-child(4) {
     gap: 50px;
