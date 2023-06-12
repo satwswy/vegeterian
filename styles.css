@@ -145,11 +145,11 @@ header > div #progress #progress-value::before {
     flex-wrap: wrap;
     justify-content: unset;
     gap: 30px;
-    padding: 30px 30px 50px 30px;
+    padding: 20px;
     background-color: white;
   }
   header > div > div {
-    width: 200px;
+    width: 40%;
     height: auto;
   }
   header > div > div h5 {
@@ -161,21 +161,15 @@ header > div #progress #progress-value::before {
   header > div #progress {
     position: fixed;
     bottom: 150px;
-    right: 30px;
+    right: 20px;
   }
   header > div figure {
-    width: 150px;
-  }
-  header > div figure img {
-    width: max(150px, 70%);
+    width: 30%;
   }
 }
 @media screen and (max-width: 640px) {
   header > div #progress {
     display: none;
-  }
-  header > div {
-    padding: 30px;
   }
 }
 main {
@@ -343,7 +337,7 @@ section:nth-child(3) figure img {
 }
 @media screen and (max-width: 1007px) and (min-width: 0px) {
   main {
-    padding-top: 30px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -351,12 +345,12 @@ section:nth-child(3) figure img {
   main .intro {
     padding-right: 0px;
     height: auto;
-    padding-inline: 30px;
+    padding-inline: 20px;
   }
   main section:nth-child(2) {
     padding-right: 0px;
     align-items: center;
-    padding-inline: 30px;
+    padding-inline: 20px;
   }
   main section:nth-child(3) {
     gap: 40px;
@@ -374,13 +368,13 @@ section:nth-child(3) figure img {
   }
   main section:nth-child(4) {
     gap: 50px;
-    padding-inline: 30px;
+    padding-inline: 20px;
   }
   main section:nth-child(4) p {
     flex-grow: 1;
   }
   main section:nth-child(5) {
-    padding: 30px;
+    padding: 20px;
     flex-direction: column;
     gap: 50px;
     margin-bottom: 0px;
@@ -410,7 +404,7 @@ section:nth-child(3) figure img {
     left: 10px;
     text-shadow: 0px 0px;
     height: auto;
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
   main section:nth-child(3) figure:nth-child(odd) a {
     filter: brightness(1);
