@@ -160,26 +160,35 @@ section:nth-child(3) figure
         &:first-child
           font-size: 20px
 
-main section:nth-child(5)
-  margin-top: 75px
-  padding-right: 0px
-  flex-direction: column
-  gap: 30px
+  main section:nth-child(5)
+    margin-top: 75px
+    padding-right: 0px
+    flex-direction: column
+    gap: 30px
 
 @media screen and (max-width: 1007px) and (min-width: 641px)
   main
     padding: 30px
-
+    display: flex
+    flex-direction: column
+    gap: 100px
   main .intro
     padding-right: 0px
     height: auto
-
-  .mode-selector
-    position: fixed
-    top: 20px
-    right: 20px
-    z-index: 2
-
+  main section:nth-child(2)
+    padding-right: 0px
+  main section:nth-child(3),main section:nth-child(4),main section:nth-child(5)
+    margin-top: 0px
+  main section:nth-child(4)
+    gap: 50px
+    p
+      flex-grow: 1
+      span:first-child
+        font-size: 20px  
+  main section:nth-child(5)
+    padding-right: 0px
+    flex-direction: column
+    gap: 50px
 
 @media screen and (max-width: 640px)
 
