@@ -237,7 +237,7 @@ main section:nth-child(3) figure h2 {
   position: absolute;
   bottom: 3%;
   left: 3%;
-  font-size: clamp(1.5rem, 3.5vw + 0.1rem, 3rem);
+  font-size: clamp(1.5rem, 2.5vw + 0.1rem, 3rem);
   color: rgb(255, 255, 255);
   width: 50%;
 }
@@ -271,7 +271,7 @@ main section:nth-child(4) p {
 }
 main section:nth-child(4) p span:first-child {
   line-height: 1.4;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2.5vw + 0.1rem, 2rem);
 }
 main section:nth-child(4) p span:last-child {
   font-size: 14px;
@@ -311,7 +311,6 @@ section:nth-child(3) figure img {
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
   main section:nth-child(3) figure h2 {
     width: 80%;
-    font-size: 40px;
   }
   main section:nth-child(4) {
     margin-top: 100px;
@@ -363,11 +362,11 @@ section:nth-child(3) figure img {
   }
   main section:nth-child(3) figure h2 {
     width: 80%;
-    text-shadow: 3px 3px black;
   }
   main section:nth-child(4) {
     gap: 50px;
     padding-inline: 20px;
+    font-size: 15px;
   }
   main section:nth-child(4) p {
     flex-grow: 1;
@@ -404,7 +403,6 @@ section:nth-child(3) figure img {
     position: relative;
     top: 0;
     left: 10px;
-    text-shadow: 0px 0px;
     height: auto;
     padding: 20px 0px;
   }
@@ -425,9 +423,6 @@ section:nth-child(3) figure img {
   main section:nth-child(5) div {
     flex-direction: column;
     gap: 20px;
-  }
-  main section:nth-child(3) figure:nth-child(2n+2) a img {
-    object-fit: cover;
   }
 }
 footer {
