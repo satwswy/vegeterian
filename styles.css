@@ -45,10 +45,11 @@ ul {
   margin: 0;
 }
 
-body {
-  display: unset;
+@media screen and (max-width: 1007px) and (min-width: 641px) {
+  body {
+    display: unset;
+  }
 }
-
 header > div {
   position: sticky;
   top: 0;
@@ -231,8 +232,8 @@ main section:nth-child(3) figure:nth-child(2n+2) {
 }
 main section:nth-child(3) figure h2 {
   position: absolute;
-  bottom: 5%;
-  left: 5%;
+  bottom: 3%;
+  left: 3%;
   font-size: clamp(1.5rem, 3.5vw + 0.1rem, 3rem);
   color: rgb(255, 255, 255);
   width: 50%;
@@ -349,13 +350,15 @@ section:nth-child(3) figure img {
     margin-top: 0px;
   }
   main section:nth-child(3) figure {
-    height: 400px;
+    height: 500px;
   }
   main section:nth-child(3) figure h2 {
-    width: 70%;
+    width: 80%;
+    text-shadow: 3px 3px black;
   }
-  main section:nth-child(3) figure:nth-child(2n+2) {
-    padding-inline: 200px;
+  main section:nth-child(3) figure:nth-child(2n+2) a img {
+    padding-inline: 150px;
+    padding-bottom: 50px;
   }
   main section:nth-child(4) {
     gap: 50px;
