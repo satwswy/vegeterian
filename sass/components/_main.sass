@@ -3,7 +3,7 @@ main
   .intro
     display: flex
     justify-content: space-between
-
+    padding-right: 50px
     width: 100%
     height: calc( 100vh - $rhaside - 100px )
     h1
@@ -13,6 +13,7 @@ main
   section:nth-child(2)
     display: flex
     justify-content: space-between
+    padding-right: 50px
     h3
       width: 70%
       font-size: 20px
@@ -43,17 +44,10 @@ main
     figure
       flex-basis: 100%
       position: relative
-      &:first-child
-        a
-          filter: brightness(0.7)
+      &:nth-child(odd) a
+        filter: brightness(0.7)
       &:nth-child(2n+2)
         background-color: rgb(103, 19, 17) 
-      &:nth-child(3)
-        a
-          filter: brightness(0.7)
-      &:nth-child(5)
-        a
-          filter: brightness(0.7)
       h2
         position: absolute
         bottom: 5%
@@ -98,6 +92,7 @@ main
     margin-top: 100px
     margin-bottom: 50px
     flex-wrap: wrap
+    padding-right: 150px
     div
       display: flex
       gap: 50px
@@ -141,37 +136,10 @@ section:nth-child(3) figure
     padding-right: 0px
     flex-direction: column
     gap: 30px
-  header > div
-    padding-left: 20px
-    >div
-      padding-right: 40px
   main .intro h1
     font-size: 34px
 
-@media screen and (max-width: 1007px) and (min-width: 641)
-  #header
-    position: sticky
-    top: 0px  
-    z-index: 500
-  body
-    display: unset  
-  header > div 
-    flex-direction: row
-    height: auto
-    flex-wrap: wrap
-    justify-content: unset
-    gap: 30px
-    padding-block: 20px
-    padding-left: 20px
-    background-color: white
-    >div
-      width: 150px  
-  header > div #progress
-    display: none  
-  header > div figure
-    width: 150px  
-    img
-      width: max(150px,70%)
+@media screen and (max-width: 1007px) and (min-width: 641) 
   .mode-selector
     position: fixed
     top: 20px
