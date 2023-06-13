@@ -271,7 +271,7 @@ main section:nth-child(4) p {
 }
 main section:nth-child(4) p span:first-child {
   line-height: 1.4;
-  font-size: clamp(1rem, 2.5vw + 0.1rem, 2rem);
+  font-size: clamp(1rem, 2.5vw + 0.1rem, 1.5rem);
 }
 main section:nth-child(4) p span:last-child {
   font-size: 14px;
@@ -352,10 +352,6 @@ section:nth-child(3) figure img {
   }
   main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
     margin-top: 0px;
-  }
-  main section:nth-child(3) {
-    gap: 40px;
-    background-color: lightgrey;
   }
   main section:nth-child(3) figure {
     height: 500px;
