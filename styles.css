@@ -196,7 +196,7 @@ main .intro {
 }
 main .intro h1 {
   width: 80%;
-  font-size: clamp(1.4rem, 3.5vw + 0.1rem, 2.7rem);
+  font-size: clamp(1.4rem, 2.3vw + 0.1rem, 2.7rem);
   line-height: 1.5;
 }
 main section:nth-child(2) {
