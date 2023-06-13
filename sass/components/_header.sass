@@ -30,7 +30,7 @@ header > div
     >h5 span:nth-child(2)
       color: rgb(103, 19, 17)
       display: inline-block
-      margin-top: 15px
+      margin-top: 10px
 
   #progress
     width: 110px
@@ -100,7 +100,7 @@ header > div
     background-color: white
 
     >div
-      width: 40%
+      width: 50%
       height: auto
       h5
         height: 100%
@@ -113,13 +113,22 @@ header > div
       right: 20px  
 
     figure
-      width: 30%  
+      width: 10%  
 
 
-@media screen and (max-width: 640px)
-  header > div #progress
-    display: none
-
+@media screen and (max-width: 670px)
+  #header
+    position: static
+  header > div 
+    flex-direction: column
+    gap: 15px
+    >div
+      width: 100%
+    figure
+      width: 20%
+    #progress
+      display: none
+    
 
 
 
