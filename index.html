@@ -290,7 +290,8 @@
             document.getElementById("header").classList.remove("dark-mode");
             document.getElementById("main").classList.add("light-mode");
             document.getElementById("header").classList.add("light-mode");
-            document.querySelector(".marquee").style.backgroundColor = "rgb(7,7,7)"
+            document.querySelector(".marquees-wrapper").style.backgroundColor = "rgb(7,7,7)"
+            document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
             document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid black"
             document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid black"
             document.querySelector("header > div > div > h5 span:nth-child(2)").style.color = "rgb(103,19,17)"
@@ -301,6 +302,8 @@
             document.getElementById("header").classList.remove("light-mode");
             document.getElementById("main").classList.add("dark-mode");
             document.getElementById("header").classList.add("dark-mode");
+            document.getElementById("header").style.backgroundColor="black"
+            document.querySelector(".marquees-wrapper").style.backgroundColor = "rgb(61,61,61)"
             document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
             document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid white"
             document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid white"

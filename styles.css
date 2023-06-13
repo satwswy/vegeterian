@@ -138,6 +138,7 @@ header > div #progress #progress-value::before {
     position: sticky;
     top: 0px;
     z-index: 1;
+    background-color: white;
   }
   header > div {
     flex-direction: row;
@@ -146,7 +147,6 @@ header > div #progress #progress-value::before {
     justify-content: unset;
     gap: 30px;
     padding: 20px;
-    background-color: white;
   }
   header > div > div {
     width: 50%;
@@ -382,6 +382,7 @@ section:nth-child(3) figure img {
   }
   main section:nth-child(4) p {
     width: 100%;
+    padding-bottom: 10px;
   }
   main section:nth-child(5) {
     padding: 20px;
@@ -497,7 +498,7 @@ footer ul {
   color: black;
 }
 
-@media screen and (max-width: 670px) and (min-width: 0px) {
+@media screen and (max-width: 1007px) and (min-width: 0px) {
   footer ul {
     padding-block: 20px;
     font-size: 22px;
