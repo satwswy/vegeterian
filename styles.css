@@ -1,24 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
-* {
-  font-family: "Roboto", sans-serif;
+*,
+*::before,
+::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0 solid transparent;
-}
-
-::before, ::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: minmax(250px, 16%) 1fr;
 }

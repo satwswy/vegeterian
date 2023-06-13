@@ -1,19 +1,15 @@
-*
-    font-family: 'Roboto', sans-serif
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-    border: 0 solid transparent
-::before,::after
+*,
+*::before,
+::after
     box-sizing: border-box
 
-html
-    scroll-behavior: smooth
 
 body
+    font-family: 'Roboto', sans-serif
     width: 100%
     min-height: 100vh
-    margin: 0 auto
+    margin: 0
+    padding: 0    
     display: grid
     grid-template-columns: minmax(250px,16%) 1fr
 
@@ -38,6 +34,6 @@ ul
 // Styles for responsive layout
 
      
-@media screen and (max-width: 1007px) and (min-width: 0px)
+@media screen and (min-width: 0px)
   body
     display: unset  
