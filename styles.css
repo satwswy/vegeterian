@@ -204,6 +204,7 @@ main section:nth-child(2) h3 {
   width: 70%;
   font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
   line-height: 1.5;
+  margin: 0;
   margin-top: -3px;
 }
 main section:nth-child(2) nav {
@@ -256,6 +257,7 @@ main section:nth-child(3) figure h2 {
   font-size: clamp(2rem, 2.5vw + 0.1rem, 3rem);
   color: rgb(255, 255, 255);
   width: 80%;
+  margin: 0;
 }
 main section:nth-child(4) {
   display: flex;
