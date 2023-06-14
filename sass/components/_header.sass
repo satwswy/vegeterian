@@ -40,7 +40,7 @@ header > div
                 color: rgb(103, 19, 17)
                 display: inline-block
                 margin-top: 10px
-
+                
 
     #progress
         width: 110px
@@ -86,8 +86,17 @@ header > div
                 top: 30px
                 z-index: 5
 
+:root[theme="dark"] header > div > div h5 span:nth-child(2)
+    color: white
 
+
+:root[theme="light"] header > div > div h5 span:nth-child(2)
+    color: rgb(103, 19, 17)   
 // Styles for responsive layout
+
+
+
+
 
 @media screen and (max-width: 1599px) and (min-width: 1008px)
 

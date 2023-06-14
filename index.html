@@ -289,21 +289,16 @@
 
         // <----------------------- Light/Dark mode effect -------------------->
 
-        let root = document.querySelector(':root')
         document.querySelector('.mode-selector > button:first-child').addEventListener('click', () => {
-            root.classList.add('light-mode');
-            root.classList.remove('dark-mode');
+            document.documentElement.setAttribute('theme','light')
         })
 
         document.querySelector('.mode-selector > button:not(:first-child)').addEventListener('click', () => {
-            root.classList.add('dark-mode');
-            root.classList.remove('light-mode');
+            document.documentElement.setAttribute('theme','dark');
         })
 
 
         // <----------------------------------------------------------------------->
-
-
 
 
 
