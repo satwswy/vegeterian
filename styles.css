@@ -230,6 +230,7 @@ main section:nth-child(3) {
 main section:nth-child(3) figure {
   flex-basis: 100%;
   position: relative;
+  margin: 0;
 }
 main section:nth-child(3) figure:nth-child(odd) a {
   filter: brightness(0.7);
@@ -264,6 +265,7 @@ main section:nth-child(4) figure {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  margin: 0;
 }
 main section:nth-child(4) figure img {
   width: 100%;
