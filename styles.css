@@ -54,6 +54,7 @@ header > div {
 }
 header > div figure {
   width: 80%;
+  margin: 0;
 }
 header > div figure img {
   width: 100%;
@@ -68,7 +69,10 @@ header > div > div {
   flex-direction: column;
   justify-content: space-between;
 }
-header > div > div > h5 span:nth-child(2) {
+header > div > div h5 {
+  margin: 0;
+}
+header > div > div h5 span:nth-child(2) {
   color: rgb(103, 19, 17);
   display: inline-block;
   margin-top: 10px;
@@ -189,6 +193,7 @@ main .intro h1 {
   width: 80%;
   font-size: clamp(1.4rem, 2.3vw + 0.1rem, 2.7rem);
   line-height: 1.5;
+  margin: 0;
 }
 main section:nth-child(2) {
   display: flex;
@@ -530,6 +535,7 @@ footer ul {
   height: 12px;
   border-radius: 50%;
   cursor: pointer;
+  padding: 0;
 }
 .mode-selector > button:first-child {
   border: 2px solid black;
