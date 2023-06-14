@@ -150,37 +150,6 @@ header > div > div h5 span:nth-child(2) {
 main {
   padding-top: 50px;
 }
-main section:nth-child(3) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-main section:nth-child(3) figure {
-  flex-basis: 100%;
-  position: relative;
-  margin: 0;
-}
-main section:nth-child(3) figure:nth-child(odd) a {
-  filter: brightness(0.7);
-}
-main section:nth-child(3) figure:nth-child(6n+2) {
-  background-color: rgb(103, 19, 17);
-}
-main section:nth-child(3) figure:nth-child(6n+4) {
-  background-color: rgb(162, 86, 34);
-}
-main section:nth-child(3) figure:nth-child(6n+6) {
-  background-color: rgb(116, 122, 52);
-}
-main section:nth-child(3) figure h2 {
-  position: absolute;
-  bottom: 3%;
-  left: 3%;
-  font-size: clamp(2rem, 2.5vw + 0.1rem, 3rem);
-  color: rgb(255, 255, 255);
-  width: 80%;
-  margin: 0;
-}
 main section:nth-child(4) {
   display: flex;
   align-items: center;
@@ -231,24 +200,6 @@ main section:nth-child(5) div {
   flex-wrap: wrap;
 }
 
-section:nth-child(3) figure img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  width: 100%;
-}
-
-@media screen and (min-width: 670px) {
-  main section:nth-child(3) figure {
-    flex-basis: 50%;
-  }
-  main section:nth-child(3) figure:nth-child(4n-1) {
-    transform: translateX(100%);
-  }
-  main section:nth-child(3) figure:nth-child(4n) {
-    transform: translateX(-100%);
-  }
-}
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
   main section:nth-child(4) {
     margin-top: 100px;
@@ -278,14 +229,8 @@ section:nth-child(3) figure img {
     flex-direction: column;
     gap: 50px;
   }
-  main section:nth-child(3), main section:nth-child(4), main section:nth-child(5) {
+  main section:nth-child(4), main section:nth-child(5) {
     margin-top: 0px;
-  }
-  main section:nth-child(3) figure {
-    height: 500px;
-  }
-  main section:nth-child(3) figure:nth-child(2n+2) a img {
-    object-fit: contain;
   }
   main section:nth-child(4) {
     gap: 20px;
@@ -316,30 +261,6 @@ section:nth-child(3) figure img {
 @media screen and (max-width: 670px) and (min-width: 0px) {
   main {
     gap: 20px;
-  }
-  main section:nth-child(3) figure {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  main section:nth-child(3) figure a {
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  main section:nth-child(3) figure:nth-child(odd) {
-    background-color: black;
-  }
-  main section:nth-child(3) figure:nth-child(odd) a {
-    filter: brightness(1);
-  }
-  main section:nth-child(3) figure h2 {
-    position: relative;
-    top: 0;
-    left: 10px;
-    height: auto;
-    padding: 20px 0px;
   }
   main section:nth-child(5) div {
     flex-direction: column;

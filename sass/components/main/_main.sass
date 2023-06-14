@@ -5,42 +5,6 @@ main
 
 
 
-    section:nth-child(3)
-        display: flex
-        flex-wrap: wrap
-        margin-top: 50px
-
-
-        figure
-            flex-basis: 100%
-            position: relative
-            margin: 0
-
-
-            &:nth-child(odd) a
-                filter: brightness(0.7)
-
-
-            &:nth-child(6n+2)
-                background-color: rgb(103, 19, 17)
-
-
-            &:nth-child(6n+4)
-                background-color: rgb(162, 86, 34)
-
-
-            &:nth-child(6n+6)
-                background-color: rgb(116, 122, 52)
-
-
-            h2
-                position: absolute
-                bottom: 3%
-                left: 3%
-                font-size: $h2fs
-                color: rgb(255, 255, 255)
-                width: 80%
-                margin: 0
 
 
     section:nth-child(4)
@@ -100,32 +64,11 @@ main
             flex-wrap: wrap
 
 
-section:nth-child(3) figure img
-    height: 100%
-    object-fit: cover
-    object-position: center center
-    width: 100%
-
-
-
 
 
 // Styles for responsive layout
 
-@media screen and (min-width: 670px)
 
-
-
-    main section:nth-child(3) figure
-        flex-basis: 50%
-
-
-        &:nth-child(4n-1)
-            transform: translateX(100%)
-
-
-        &:nth-child(4n)
-            transform: translateX(-100%)
 
 
 @media screen and (max-width: 1599px) and (min-width: 1008px)
@@ -174,28 +117,12 @@ section:nth-child(3) figure img
 
 
 
-
-
-
-
-
-
-
-
-
-    main section:nth-child(3),main section:nth-child(4),main section:nth-child(5)
+    main section:nth-child(4),main section:nth-child(5)
         margin-top: 0px
 
 
 
 
-
-    main section:nth-child(3) figure
-        height: 500px
-
-
-        &:nth-child(2n+2) a img
-            object-fit: contain
 
 
 
@@ -243,42 +170,6 @@ section:nth-child(3) figure img
     main
         gap: 20px
 
-
-
-
-
-
-
-
-
-
-    main section:nth-child(3) figure     
-        display: flex
-        flex-direction: column
-        height: auto
-
-
-        a
-            height: 320px
-            display: flex
-            align-items: center
-            justify-content: center
-
-
-        &:nth-child(odd)
-            background-color: black
-
-
-            a
-                filter: brightness(1)
-
-
-        h2
-            position: relative
-            top: 0
-            left: 10px
-            height: auto
-            padding: 20px 0px
 
 
 
