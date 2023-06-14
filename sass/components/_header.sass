@@ -1,144 +1,190 @@
 // Styles for default layout
 
 header > div
-  position: sticky
-  top: 0
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  height: 100vh
-  z-index: 1
-  padding-block: 50px
-  padding-left: 50px
-
-  figure
-    width: 80%
-    margin: 0
-
-    img
-      width: 100%
-      height: auto
-
-  >div
-    width: 100%
-    font-size: 13px
-    padding-right: 2vw
-    height: $rhaside
+    position: sticky
+    top: 0
     display: flex
     flex-direction: column
     justify-content: space-between
-    h5
-      margin: 0
-      span:nth-child(2)
-        color: rgb(103, 19, 17)
-        display: inline-block
-        margin-top: 10px
+    height: 100vh
+    z-index: 1
+    padding-block: 50px
+    padding-left: 50px
 
-  #progress
-    width: 110px
-    height: 110px
-    aspect-ratio: 1
-    display: grid
-    place-items: center
-    border-radius: 50%
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-    cursor: pointer
 
-    #progress-value
-      display: block
-      height: calc( 100% - 15px )
-      width: calc( 100% - 15px )
-      background-color: rgb(256, 256, 256)
-      border-radius: 50%
-      display: grid
-      place-items: center
-      font-size: 35px
-      color: #001a2e
-      position: relative
+    figure
+        width: 80%
+        margin: 0
 
-      &::after
-        content: ""
-        width: 30px
-        height: 50px
-        background-color: black
-        border-radius: 25px
-        position: absolute
-        inset: 0
-        margin: auto
 
-      &::before
-        content: ""
-        width: 6px
-        height: 6px
-        background-color: rgb(256, 256, 256)
-        position: absolute
+        img
+            width: 100%
+            height: auto
+
+
+    >div
+        width: 100%
+        font-size: 13px
+        padding-right: 2vw
+        height: $rhaside
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+
+        h5
+            margin: 0
+
+
+            span:nth-child(2)
+                color: rgb(103, 19, 17)
+                display: inline-block
+                margin-top: 10px
+
+
+    #progress
+        width: 110px
+        height: 110px
+        aspect-ratio: 1
+        display: grid
+        place-items: center
         border-radius: 50%
-        top: 30px
-        z-index: 5
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+
+
+        #progress-value
+            display: block
+            height: calc( 100% - 15px )
+            width: calc( 100% - 15px )
+            background-color: rgb(256, 256, 256)
+            border-radius: 50%
+            display: grid
+            place-items: center
+            font-size: 35px
+            color: #001a2e
+            position: relative
+
+
+            &::after
+                content: ""
+                width: 30px
+                height: 50px
+                background-color: black
+                border-radius: 25px
+                position: absolute
+                inset: 0
+                margin: auto
+
+
+            &::before
+                content: ""
+                width: 6px
+                height: 6px
+                background-color: rgb(256, 256, 256)
+                position: absolute
+                border-radius: 50%
+                top: 30px
+                z-index: 5
 
 
 // Styles for responsive layout
 
 @media screen and (max-width: 1599px) and (min-width: 1008px)
-  header > div
-    padding-left: 30px
 
-    >div
-      padding-right: 40px
+
+
+
+    header > div
+        padding-left: 30px
+
+
+        >div
+            padding-right: 40px
 
 @media screen and (max-width: 1007px) and (min-width: 0px)
-  #header
-    position: sticky
-    top: 0px  
-    z-index: 1
-    background-color: white
-  header > div 
-    flex-direction: row
-    height: auto
-    flex-wrap: wrap
-    justify-content: unset
-    gap: 30px
-    padding: 20px
 
-    >div
-      width: 50%
-      height: auto
-      h5
-        height: 100%
-        display: flex
-        flex-direction: column
+
+
+
+    #header
+        position: sticky
+        top: 0px    
+        z-index: 1
+        background-color: white
+
+
+
+
+
+    header > div 
+        flex-direction: row
+        height: auto
+        flex-wrap: wrap
+        justify-content: unset
+        gap: 30px
+        padding: 20px
+
+
+        >div
+            width: 50%
+            height: auto
+
+
+            h5
+                height: 100%
+                display: flex
+                flex-direction: column
  
-    #progress
-      position: fixed
-      bottom: 80px
-      right: 20px  
 
-    figure
-      width: 10%  
+        #progress
+            position: fixed
+            bottom: 80px
+            right: 20px   
+
+
+        figure
+            width: 10%    
 
 
 @media screen and (max-width: 670px)
-  #header
-    position: static
-  header > div 
-    flex-direction: column
-    gap: 15px
-    >div
-      width: 100%
-    figure
-      width: 20%
-    #progress
-      display: none
+
+
+
+
+
+    #header
+        position: static
+
+
+
+
+
+
+    header > div 
+        flex-direction: column
+        gap: 15px
+
+
+        >div
+            width: 100%
+
+
+        figure
+            width: 20%
+
+            
+        #progress
+            display: none
+      
+
+
+
+
+
+
+
+
+
+
+
     
-
-
-
-
-
-
-
-
-
-
-
-  

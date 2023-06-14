@@ -43,8 +43,8 @@
                 το Legendary Burger και το Magic Mince!
             </h1>
             <div class="mode-selector">
-                <button onclick="setLightMode()"></button>
-                <button onclick="setDarkMode()"></button>
+                <button></button>
+                <button></button>
             </div>
         </div>
         <section>
@@ -285,30 +285,6 @@
     </footer>
     <script>
 
-        function setLightMode() {
-            document.getElementById("main").classList.remove("dark-mode");
-            document.getElementById("header").classList.remove("dark-mode");
-            document.getElementById("main").classList.add("light-mode");
-            document.getElementById("header").classList.add("light-mode");
-            document.querySelector(".marquees-wrapper").style.backgroundColor = "rgb(7,7,7)"
-            document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
-            document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid black"
-            document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid black"
-            document.querySelector("header > div > div > h5 span:nth-child(2)").style.color = "rgb(103,19,17)"
-        }
-
-        function setDarkMode() {
-            document.getElementById("main").classList.remove("light-mode");
-            document.getElementById("header").classList.remove("light-mode");
-            document.getElementById("main").classList.add("dark-mode");
-            document.getElementById("header").classList.add("dark-mode");
-            document.getElementById("header").style.backgroundColor="black"
-            document.querySelector(".marquees-wrapper").style.backgroundColor = "rgb(61,61,61)"
-            document.querySelector(".marquee").style.backgroundColor = "rgb(61,61,61)"
-            document.querySelector("main .intro .mode-selector > button:first-child").style.border = "2px solid white"
-            document.querySelector("main .intro .mode-selector > button:not(:first-child)").style.border = "2px solid white"
-            document.querySelector("header > div > div > h5 span:nth-child(2)").style.color = "white"
-        }
 
         // <----------------------- Scroll animation effect -------------------->
 
@@ -321,9 +297,9 @@
             let scrollValue = Math.round((pos * 100) / calcHeight)
 
             /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
-            scrollProgress.addEventListener("click", () => {
-                document.documentElement.scrollTop = 0;
-            });
+            // scrollProgress.addEventListener("click", () => {
+            //     document.documentElement.scrollTop = 0;
+            // });
 
 
             scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;

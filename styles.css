@@ -85,7 +85,6 @@ header > div #progress {
   place-items: center;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 header > div #progress #progress-value {
   display: block;
@@ -493,16 +492,6 @@ footer ul {
 
 .marquee-2.scroll {
   animation: scroll 25s linear infinite reverse;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-.white-mode {
-  background-color: white;
-  color: black;
 }
 
 @media screen and (max-width: 1007px) and (min-width: 0px) {
