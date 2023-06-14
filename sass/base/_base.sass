@@ -10,8 +10,7 @@ body
     min-height: 100vh
     margin: 0
     padding: 0    
-    display: grid
-    grid-template-columns: minmax(250px,16%) 1fr
+
 
 img,svg
     display: block
@@ -34,6 +33,7 @@ ul
 // Styles for responsive layout
 
      
-@media screen and (min-width: 0px)
+@media screen and (min-width: 670px)
   body
-    display: unset  
+    display: grid
+    grid-template-columns: minmax(250px,16%) 1fr

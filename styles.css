@@ -11,8 +11,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: minmax(250px, 16%) 1fr;
 }
 
 img, svg {
@@ -37,9 +35,10 @@ ul {
   margin: 0;
 }
 
-@media screen and (max-width: 1007px) and (min-width: 0px) {
+@media screen and (min-width: 670px) {
   body {
-    display: unset;
+    display: grid;
+    grid-template-columns: minmax(250px, 16%) 1fr;
   }
 }
 header > div {
