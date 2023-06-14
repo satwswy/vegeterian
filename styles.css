@@ -150,6 +150,185 @@ header > div > div h5 span:nth-child(2) {
 main {
   padding-top: 50px;
 }
+
+@media screen and (max-width: 1007px) and (min-width: 0px) {
+  main {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 670px) and (min-width: 0px) {
+  main {
+    gap: 20px;
+  }
+}
+main .intro {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  width: 100%;
+  height: calc(100vh - 270px - 100px);
+}
+main .intro h1 {
+  width: 80%;
+  font-size: clamp(1.4rem, 2.3vw + 0.1rem, 2.7rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+main .intro {
+  padding-right: 0px;
+  height: auto;
+  padding-inline: 20px;
+}
+main .intro h1 {
+  width: 95%;
+}
+
+main .intro h1 {
+  width: 100%;
+  line-height: 1.3;
+}
+
+main section:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+main section:nth-child(2) h3 {
+  width: 70%;
+  font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
+  line-height: 1.5;
+  margin: 0;
+  margin-top: -3px;
+}
+main section:nth-child(2) nav {
+  display: flex;
+  gap: 12px;
+}
+main section:nth-child(2) nav a {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 50%;
+}
+main section:nth-child(2) nav a svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1007px) and (min-width: 0px) {
+  main section:nth-child(2) {
+    padding-right: 0px;
+    align-items: center;
+    padding-inline: 20px;
+  }
+}
+@media screen and (max-width: 670px) and (min-width: 0px) {
+  main section:nth-child(2) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  main section:nth-child(2) h3 {
+    width: 100%;
+  }
+}
+main section:nth-child(3) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+main section:nth-child(3) figure {
+  flex-basis: 100%;
+  position: relative;
+  margin: 0;
+}
+main section:nth-child(3) figure:nth-child(odd) a {
+  filter: brightness(0.7);
+}
+main section:nth-child(3) figure:nth-child(6n+2) {
+  background-color: rgb(103, 19, 17);
+}
+main section:nth-child(3) figure:nth-child(6n+4) {
+  background-color: rgb(162, 86, 34);
+}
+main section:nth-child(3) figure:nth-child(6n+6) {
+  background-color: rgb(116, 122, 52);
+}
+main section:nth-child(3) figure h2 {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  font-size: clamp(2rem, 2.5vw + 0.1rem, 3rem);
+  color: rgb(255, 255, 255);
+  width: 80%;
+  margin: 0;
+}
+main section:nth-child(3) figure a img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+@media screen and (min-width: 670px) {
+  main section:nth-child(3) figure {
+    flex-basis: 50%;
+  }
+  main section:nth-child(3) figure:nth-child(4n-1) {
+    transform: translateX(100%);
+  }
+  main section:nth-child(3) figure:nth-child(4n) {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 1007px) and (min-width: 0px) {
+  main section:nth-child(3) {
+    margin-top: 0px;
+  }
+  main section:nth-child(3) figure {
+    height: 500px;
+  }
+  main section:nth-child(3) figure:nth-child(2n+2) a img {
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 670px) and (min-width: 0px) {
+  main section:nth-child(3) figure {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  main section:nth-child(3) figure:nth-child(odd) {
+    background-color: black;
+  }
+  main section:nth-child(3) figure:nth-child(odd) a {
+    filter: brightness(1);
+  }
+  main section:nth-child(3) figure a {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main section:nth-child(3) figure h2 {
+    position: relative;
+    top: 0;
+    left: 10px;
+    height: auto;
+    padding: 20px 0px;
+  }
+}
 main section:nth-child(4) {
   display: flex;
   align-items: center;
@@ -186,19 +365,6 @@ main section:nth-child(4) p span:first-child {
 main section:nth-child(4) p span:last-child {
   font-size: 14px;
 }
-main section:nth-child(5) {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-  padding-right: 150px;
-}
-main section:nth-child(5) div {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-}
 
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
   main section:nth-child(4) {
@@ -215,24 +381,10 @@ main section:nth-child(5) div {
   main section:nth-child(4) p span:first-child {
     font-size: 20px;
   }
-  main section:nth-child(5) {
-    margin-top: 75px;
-    padding-right: 0px;
-    flex-direction: column;
-    gap: 30px;
-  }
 }
 @media screen and (max-width: 1007px) and (min-width: 0px) {
-  main {
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-  main section:nth-child(4), main section:nth-child(5) {
-    margin-top: 0px;
-  }
   main section:nth-child(4) {
+    margin-top: 0px;
     gap: 20px;
     padding-inline: 20px;
     flex-direction: column;
@@ -245,11 +397,36 @@ main section:nth-child(5) div {
     padding-bottom: 10px;
     text-align: center;
   }
+}
+main section:nth-child(5) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding-right: 150px;
+}
+main section:nth-child(5) div {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1008px) {
+  main section:nth-child(5) {
+    margin-top: 75px;
+    padding-right: 0px;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1007px) and (min-width: 0px) {
   main section:nth-child(5) {
     padding: 20px;
     flex-direction: column;
     gap: 13px;
     margin-bottom: 0px;
+    margin-top: 0px;
   }
   main section:nth-child(5) span {
     font-size: 14px;
@@ -259,9 +436,6 @@ main section:nth-child(5) div {
   }
 }
 @media screen and (max-width: 670px) and (min-width: 0px) {
-  main {
-    gap: 20px;
-  }
   main section:nth-child(5) div {
     flex-direction: column;
     gap: 6px;

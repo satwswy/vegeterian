@@ -1,0 +1,51 @@
+
+main section:nth-child(5)
+    display: flex
+    justify-content: space-between
+    margin-top: 100px
+    margin-bottom: 50px
+    flex-wrap: wrap
+    padding-right: 150px
+
+
+    div
+        display: flex
+        gap: 50px
+        flex-wrap: wrap
+
+
+
+
+@media screen and (max-width: 1599px) and (min-width: 1008px)
+
+
+    main section:nth-child(5)
+        margin-top: 75px
+        padding-right: 0px
+        flex-direction: column
+        gap: 30px        
+
+
+@media screen and (max-width: 1007px) and (min-width: 0px)
+
+    main section:nth-child(5)
+        padding: 20px
+        flex-direction: column
+        gap: 13px
+        margin-bottom: 0px
+        margin-top: 0px
+
+        span
+            font-size: 14px
+
+
+        div
+            font-size: 14px            
+
+
+@media screen and (max-width: 670px) and (min-width: 0px)            
+    
+  
+    main section:nth-child(5) div
+        flex-direction: column
+        gap: 6px
