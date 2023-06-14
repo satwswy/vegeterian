@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root.dark-mode {
+  color-scheme: dark;
+}
+
+:root.light-mode {
+  color-scheme: light;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;

@@ -286,70 +286,53 @@
     <script>
 
 
+
+        // <----------------------- Light/Dark mode effect -------------------->
+
+        let root = document.querySelector(':root')
+        document.querySelector('.mode-selector > button:first-child').addEventListener('click', () => {
+            root.classList.add('light-mode');
+            root.classList.remove('dark-mode');
+        })
+
+        document.querySelector('.mode-selector > button:not(:first-child)').addEventListener('click', () => {
+            root.classList.add('dark-mode');
+            root.classList.remove('light-mode');
+        })
+
+
+        // <----------------------------------------------------------------------->
+
+
+
+
+
         // <----------------------- Scroll animation effect -------------------->
 
+
         let calcScrollValue = () => {
+
             let scrollProgress = document.getElementById("progress");
+
             let progressValue = document.getElementById("progress-value")
+
             let pos = document.documentElement.scrollTop;
+
             let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
             let scrollValue = Math.round((pos * 100) / calcHeight)
 
-            /* if (pos > 100) { scrollProgress.style.display = "grid"; } else scrollProgress.style.display = "none"}*/
-            // scrollProgress.addEventListener("click", () => {
-            //     document.documentElement.scrollTop = 0;
-            // });
-
-
             scrollProgress.style.background = `conic-gradient(#f5881f ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+
         }
 
         window.onscroll = calcScrollValue;
+
         window.onload = calcScrollValue
 
 
-
         // <----------------------------------------------------------------------->
 
-
-
-
-        // <----------------------- Same height elements functionality -------------------->
-
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     var figure = document.querySelector('section:nth-child(4) figure');
-        //     var p = document.querySelector('section:nth-child(4) p');
-
-        //     function setFigureHeightAndWidth() {
-        //         var height = p.offsetHeight;
-        //         figure.style.height = height + 'px';
-        //         figure.style.width = height + 'px';
-        //     }
-
-        //     setFigureHeightAndWidth();
-        //     window.addEventListener('resize', setFigureHeightAndWidth);
-        // });
-
-        // <----------------------------------------------------------------------->
-        // window.onload = () => {
-        //     let scrollProgress = document.getElementById("progress");
-        //     let footerHeight = document.querySelector("footer").getBoundingClientRect().height
-            // let aside = document.querySelector(".aside-content")
-            // window.addEventListener('scroll', () => {
-            //     console.log(scrollY, innerHeight,document.body.scrollHeight)
-            //     if (scrollY + innerHeight >= document.body.scrollHeight - footerHeight) {
-            //         aside.style.top = -((scrollY + innerHeight) - (document.body.scrollHeight - footerHeight))+"px"
-            //     }
-            // })
-        //     window.addEventListener('scroll', () => {
-
-        //         if (scrollY === document.body.scrollHeight - innerHeight - footerHeight) {
-        //             scrollProgress.style.bottom = "150px"
-        //         }
-
-        //     })
-        // }
 
     </script>
 </body>
