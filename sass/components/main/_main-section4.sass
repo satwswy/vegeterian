@@ -1,12 +1,16 @@
 //----------------  Section Four styles part of Main Content. Styles for refferance --------------------//
 
+
+@use '../../abstracts/_variables'
+
+
+
 main section:nth-child(4)
     display: flex
     align-items: center
     gap: 150px
     margin-top: 120px
     flex-wrap: wrap
-
 
     figure
         width: 13rem
@@ -16,7 +20,6 @@ main section:nth-child(4)
         border-radius: 50%
         margin: 0
 
-
         img
             width: 100%
             height: 100%
@@ -25,18 +28,15 @@ main section:nth-child(4)
             top: 0
             left: 0
 
-
     p
         width: 50%
         display: flex
         flex-direction: column
         gap: 15px
 
-
         span:first-child
             line-height: 1.4
-            font-size: $spanfs
-
+            font-size: variables.$span-font-size
 
         span:last-child
             font-size: 14px
@@ -49,30 +49,23 @@ main section:nth-child(4)
         margin-top: 100px
         gap: 50px
 
-
         p
             width: 65%
             gap: 40px
 
-
             span
                 width: 100%
 
-
                 &:first-child
                     font-size: 20px
-    
-
 
 @media screen and (max-width: 1007px) and (min-width: 0px)
 
-
     main section:nth-child(4)
-        margin-top: 0px    
+        margin-top: 0px
         gap: 20px
         padding-inline: 20px
         flex-direction: column
-
 
         figure
             margin: 0 auto

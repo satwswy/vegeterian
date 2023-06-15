@@ -1,24 +1,23 @@
 
 //----------------  Section Two styles part of Main Content. Styles for h3 and socials --------------------//    
-    
+
+@use '../../abstracts/_variables'
+
 main section:nth-child(2)
     display: flex
     justify-content: space-between
     padding-right: 50px
 
-
     h3
         width: 70%
-        font-size: $h3fs
+        font-size: variables.$h3-font-size
         line-height: 1.5
         margin: 0
         margin-top: -3px
 
-
     nav
         display: flex
         gap: 12px
-
 
         a
             position: relative
@@ -27,7 +26,6 @@ main section:nth-child(2)
             background-color: rgb(236, 236, 236)
             border-radius: 50%
 
-  
             svg
                 position: absolute
                 top: 0
@@ -38,19 +36,15 @@ main section:nth-child(2)
                 width: 25px
                 height: 25px
 
-
 //----------------  Section Two responsive layout --------------------//
-
 
 @media screen and (max-width: 1007px) and (min-width: 0px)
 
     main section:nth-child(2)
         padding-right: 0px
         align-items: center
-        padding-inline: 20px                    
+        padding-inline: 20px
 
-
-    
 @media screen and (max-width: 670px) and (min-width: 0px)
 
     main section:nth-child(2)
@@ -58,6 +52,5 @@ main section:nth-child(2)
         align-items: flex-start
         gap: 20px
 
-
         h3
-            width: 100%        
+            width: 100%

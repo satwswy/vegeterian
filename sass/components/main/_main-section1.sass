@@ -1,17 +1,19 @@
 
 //----------------  Section One styles part of Main Content. Styles for title & mode-selector --------------------//   
 
+@use '../../abstracts/_variables'
+
 main .intro
 
     display: flex
     justify-content: space-between
     padding-right: 50px
     width: 100%
-    height: calc(100vh - $rhaside - 100px)
+    height: calc(100vh - variables.$asside-div-height - 100px)
 
     h1
         width: 80%
-        font-size: $h1fs
+        font-size: variables.$h1-font-size
         line-height: 1.5
         margin: 0
 
