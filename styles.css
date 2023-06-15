@@ -54,7 +54,6 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  z-index: 1;
   padding-block: 50px;
   padding-left: 50px;
 }
@@ -64,7 +63,6 @@ ul {
 }
 .sticky-container figure img {
   width: 100%;
-  height: auto;
 }
 .sticky-container > div {
   width: 100%;
@@ -92,14 +90,6 @@ ul {
   color: rgb(103, 19, 17);
 }
 
-@media screen and (max-width: 1599px) and (min-width: 1008px) {
-  .sticky-container {
-    padding-left: 30px;
-  }
-  .sticky-container > div {
-    padding-right: 40px;
-  }
-}
 @media screen and (max-width: 1007px) and (min-width: 0px) {
   header {
     position: sticky;
@@ -110,7 +100,6 @@ ul {
   .sticky-container {
     flex-direction: row;
     height: auto;
-    flex-wrap: wrap;
     justify-content: unset;
     gap: 30px;
     padding: 20px;
