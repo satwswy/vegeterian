@@ -1,9 +1,6 @@
 // Styles for default layout
 
-
 @use '../abstracts/variables'
-
-
 
 .sticky-container
     position: sticky
@@ -23,7 +20,6 @@
             width: 100%
 
     >div
-        width: 100%
         font-size: 13px
         padding-right: 2vw
         height: variables.$asside-div-height
@@ -47,7 +43,6 @@
 
 // Styles for responsive layout
 
-
 @media screen and (max-width: 1007px) and (min-width: 0px)
 
     header
@@ -69,9 +64,9 @@
 
             h5
                 height: 100%
-                display: flex
-                flex-direction: column
-                
+                span:first-child
+                    display: block
+
         figure
             width: 10%
 
