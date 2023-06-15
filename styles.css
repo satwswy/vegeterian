@@ -159,7 +159,6 @@ main .intro {
   display: flex;
   justify-content: space-between;
   padding-right: 50px;
-  width: 100%;
   height: calc(100vh - 270px - 100px);
 }
 main .intro h1 {
@@ -171,7 +170,6 @@ main .intro h1 {
 
 @media screen and (max-width: 1007px) and (min-width: 0px) {
   main .intro {
-    padding-right: 0px;
     height: auto;
     padding-inline: 20px;
   }
@@ -221,7 +219,6 @@ main section:nth-child(2) nav a svg {
 
 @media screen and (max-width: 1007px) and (min-width: 0px) {
   main section:nth-child(2) {
-    padding-right: 0px;
     align-items: center;
     padding-inline: 20px;
   }
@@ -318,7 +315,6 @@ main section:nth-child(3) figure a img {
     position: relative;
     top: 0;
     left: 10px;
-    height: auto;
     padding: 20px 0px;
   }
 }
@@ -327,7 +323,6 @@ main section:nth-child(4) {
   align-items: center;
   gap: 150px;
   margin-top: 120px;
-  flex-wrap: wrap;
 }
 main section:nth-child(4) figure {
   width: 13rem;
@@ -341,15 +336,13 @@ main section:nth-child(4) figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 main section:nth-child(4) p {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin: 0;
 }
 main section:nth-child(4) p span:first-child {
   line-height: 1.4;
@@ -368,9 +361,6 @@ main section:nth-child(4) p span:last-child {
     width: 65%;
     gap: 40px;
   }
-  main section:nth-child(4) p span {
-    width: 100%;
-  }
   main section:nth-child(4) p span:first-child {
     font-size: 20px;
   }
@@ -387,7 +377,6 @@ main section:nth-child(4) p span:last-child {
   }
   main section:nth-child(4) p {
     width: 100%;
-    padding-bottom: 10px;
     text-align: center;
   }
 }
@@ -396,13 +385,11 @@ main section:nth-child(5) {
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 50px;
-  flex-wrap: wrap;
   padding-right: 150px;
 }
 main section:nth-child(5) div {
   display: flex;
   gap: 50px;
-  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
