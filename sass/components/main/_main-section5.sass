@@ -1,6 +1,5 @@
 //----------------  Section Five styles part of Main Content. Styles for contact --------------------//
 
-
 main section:nth-child(5)
     display: flex
     justify-content: space-between
@@ -9,24 +8,20 @@ main section:nth-child(5)
     flex-wrap: wrap
     padding-right: 150px
 
-
     div
         display: flex
         gap: 50px
         flex-wrap: wrap
 
-
 //----------------  Section Five responsive layout --------------------//
 
 @media screen and (max-width: 1599px) and (min-width: 1008px)
-
 
     main section:nth-child(5)
         margin-top: 75px
         padding-right: 0px
         flex-direction: column
-        gap: 30px        
-
+        gap: 30px
 
 @media screen and (max-width: 1007px) and (min-width: 0px)
 
@@ -36,17 +31,12 @@ main section:nth-child(5)
         gap: 13px
         margin-block: 0px
 
-        span
+        span,
+        div
             font-size: 14px
 
+@media screen and (max-width: 670px) and (min-width: 0px)
 
-        div
-            font-size: 14px            
-
-
-@media screen and (max-width: 670px) and (min-width: 0px)            
-    
-  
     main section:nth-child(5) div
         flex-direction: column
         gap: 6px

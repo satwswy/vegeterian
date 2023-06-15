@@ -45,13 +45,12 @@ ul {
   margin: 0;
 }
 
-@media screen and (min-width: 1008px) {
-  body {
-    display: grid;
-    grid-template-columns: minmax(250px, 16%) 1fr;
-  }
+body {
+  display: grid;
+  grid-template-columns: minmax(250px, 16%) 1fr;
 }
-header > div {
+
+.sticky-container {
   position: sticky;
   top: 0;
   display: flex;
@@ -62,15 +61,15 @@ header > div {
   padding-block: 50px;
   padding-left: 50px;
 }
-header > div figure {
+.sticky-container figure {
   width: 70%;
   margin: 0;
 }
-header > div figure img {
+.sticky-container figure img {
   width: 100%;
   height: auto;
 }
-header > div > div {
+.sticky-container > div {
   width: 100%;
   font-size: 13px;
   padding-right: 2vw;
@@ -79,10 +78,10 @@ header > div > div {
   flex-direction: column;
   justify-content: space-between;
 }
-header > div > div h5 {
+.sticky-container > div h5 {
   margin: 0;
 }
-header > div > div h5 span:nth-child(2) {
+.sticky-container > div h5 span:nth-child(2) {
   color: rgb(103, 19, 17);
   display: inline-block;
   margin-top: 10px;
@@ -97,10 +96,10 @@ header > div > div h5 span:nth-child(2) {
 }
 
 @media screen and (max-width: 1599px) and (min-width: 1008px) {
-  header > div {
+  .sticky-container {
     padding-left: 30px;
   }
-  header > div > div {
+  .sticky-container > div {
     padding-right: 40px;
   }
 }
@@ -111,7 +110,7 @@ header > div > div h5 span:nth-child(2) {
     z-index: 1;
     background-color: white;
   }
-  header > div {
+  .sticky-container {
     flex-direction: row;
     height: auto;
     flex-wrap: wrap;
@@ -119,16 +118,16 @@ header > div > div h5 span:nth-child(2) {
     gap: 30px;
     padding: 20px;
   }
-  header > div > div {
+  .sticky-container > div {
     width: 50%;
     height: auto;
   }
-  header > div > div h5 {
+  .sticky-container > div h5 {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
-  header > div figure {
+  .sticky-container figure {
     width: 10%;
   }
 }
@@ -136,14 +135,14 @@ header > div > div h5 span:nth-child(2) {
   header {
     position: static;
   }
-  header > div {
+  .sticky-container {
     flex-direction: column;
     gap: 15px;
   }
-  header > div > div {
+  .sticky-container > div {
     width: 100%;
   }
-  header > div figure {
+  .sticky-container figure {
     width: 20%;
   }
 }
@@ -429,9 +428,7 @@ main section:nth-child(5) div {
     gap: 13px;
     margin-block: 0px;
   }
-  main section:nth-child(5) span {
-    font-size: 14px;
-  }
+  main section:nth-child(5) span,
   main section:nth-child(5) div {
     font-size: 14px;
   }
@@ -614,11 +611,9 @@ footer ul {
   animation: scroll 25s linear infinite reverse;
 }
 
-@media screen and (max-width: 1007px) and (min-width: 0px) {
-  footer ul {
-    padding-block: 20px;
-    font-size: 22px;
-  }
+footer ul {
+  padding-block: 20px;
+  font-size: 22px;
 }
 
 /*# sourceMappingURL=styles.css.map */
