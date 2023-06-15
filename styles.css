@@ -7,9 +7,6 @@
 :root[theme=dark] {
   color-scheme: dark;
 }
-:root[theme=dark] button {
-  color: white;
-}
 
 :root[theme=light] {
   color-scheme: light;
@@ -44,11 +41,12 @@ ul {
   margin: 0;
 }
 
-body {
-  display: grid;
-  grid-template-columns: minmax(250px, 16%) 1fr;
+@media screen and (min-width: 1008px) {
+  body {
+    display: grid;
+    grid-template-columns: minmax(250px, 16%) 1fr;
+  }
 }
-
 .sticky-container {
   position: sticky;
   top: 0;
