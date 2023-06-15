@@ -1,4 +1,6 @@
 
+//----------------  Section One styles part of Main Content. Styles for title & mode-selector --------------------//   
+
 main .intro
 
     display: flex
@@ -7,32 +9,26 @@ main .intro
     width: 100%
     height: calc(100vh - $rhaside - 100px)
 
-
     h1
         width: 80%
         font-size: $h1fs
         line-height: 1.5
         margin: 0
 
+//----------------  Section One responsive layout --------------------//    
 
 @media screen and (max-width: 1007px) and (min-width: 0px)
-
-
 
     main .intro
         padding-right: 0px
         height: auto
         padding-inline: 20px
 
-
         h1
-            width: 95%        
+            width: 95%
 
-
-    
 @media screen and (max-width: 670px) and (min-width: 0px)
-
 
     main .intro h1
         width: 100%
-        line-height: 1.3            
+        line-height: 1.3
