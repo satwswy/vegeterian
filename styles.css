@@ -519,6 +519,24 @@ footer ul {
   animation: scroll 25s linear infinite reverse;
 }
 
+footer .marquee-replacement {
+  display: none;
+}
+
+footer .marquee-replacement ul {
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.marquees-wrapper {
+  display: none;
+}
+
+footer .marquee-replacement {
+  display: block;
+}
+
 footer ul {
   padding-block: 20px;
   font-size: 22px;
