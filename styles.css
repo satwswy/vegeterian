@@ -542,6 +542,14 @@ footer ul {
   font-size: 22px;
 }
 
+@media screen and (max-width: 670px) and (min-width: 0px) {
+  .marquee-replacement ul li {
+    flex-basis: 60%;
+    text-align: center;
+    border: 1px solid white;
+    padding: 8px;
+  }
+}
 #progress {
   width: 110px;
   height: 110px;
